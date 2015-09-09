@@ -3,19 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <title>Web Components</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link href='https://fonts.googleapis.com/css?family=Domine:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
   <main role="main">
     <article>
       <header role="header" class="post-title">
-        <h1>Web Components</h1>
-        <h2>A discussion about Web Components and their role in the future of web development.</h2>
-        <div class="post-data"></div>
-      </header>
-      <section class="post-content">
+        <h1>
+          Web Components
+        </h1>
+        <div class="post-data">
+          28 August, 2015 - <a href="">Kaitlin Rathwell</a> - <a href="">Sources</a>
+        </div>
+        <h2>
+          A discussion surrounding Web Components and their <br> role in the future of web development.
+        </h2>
 
+      </header>
+      <nav role="nav" class="table-of-contents">
+        <h3>
+          Table of Contents
+        </h3>
+        <ul>
+          <li>
+            <div class="main-chapter">
+              <a href="">1. Introduction </a>
+            </div>
+          </li>
+          <li>
+            <div class="main-chapter">
+              <a href="">2. The Web Today</a><i class="fa fa-caret-down"></i>
+            </div>
+            <ul class="sub-list">
+              <li>2.1 Evolving Specifications</li>
+              <li>2.2 Modular Design</li>
+              <li>2.3 What needs fixing?</li>
+                <ul class="triple-sub-list">
+                  <li>2.3.1 Coupling and Seperation of Concerns</li>
+                  <li>2.3.2 Conflicting CSS</li>
+                  <li>2.3.3 Extensible HTML</li>
+                  <li>2.3.4 Solutions</li>
+                </ul>
+            </ul>
+          </li>
+          <li>
+            <div class="main-chapter">
+              3. What are Web Components
+            </div>
+            <ul class="sub-list">
+              <li>3.2 History</li>
+              <li>3.2 Has this been done before?</li>
+              <li>3.3 Overview</li>
+              <li>3.4 Possibilities</li>
+            </ul>
+          </li>
+          <li>
+            <div class="main-chapter">
+              4. The Building Blocks
+            </div>
+            <ul class="sub-list">
+              <li>4.1 HTML Templates</li>
+              <ul class="triple-sub-list">
+                <li>4.1.1 Advantages of HTML Templates</li>
+                <li>4.1.2 How is it inert?</li>
+                <li>4.1.3 Creating and initialization</li>
+              </ul>
+              <li>4.2 Custom Elements</li>
+              <ul class="triple-sub-list">
+                <li>4.2.1 Reistering new Elements</li>
+                <li>4.2.2 Adding Prototypes</li>
+                <li>4.2.3 Extending Elements</li>
+                <li>4.2.4 Life Cycle Callbacks</li>
+              </ul>
+              <li>4.3 Shadow DOM</li>
+              <ul class="triple-sub-list">
+                <li>4.3.1 Trees of Trees</li>
+                <li>4.3.2 Creating the Shadow DOM</li>
+                <li>4.3.3 Distribution</li>
+                <li>4.3.4 Events</li>
+                <li>4.3.5 Styling</li>
+              </ul>
+              <li>4.4 HTML Imports</li>
+              <ul class="triple-sub-list">
+                <li>4.4.1 The Basics</li>
+                <li>4.4.2 Parsing</li>
+                <li>4.4.3 Accessing Imports</li
+                >
+                <li>4.4.4 Events</li>
+                <li>4.4.5 Performance</li>
+              </ul>
+              <li>4.5 Working Together</li>
+            </ul>
+          </li>
+          <li>
+            <div class="main-chapter">
+              5. Are We Ready For Web Components?
+            </div>
+            <ul class="sub-list">
+              <li>5.1 Current Support</li>
+              <li>5.2 Issues and Future Specifications</li>
+              <ul class="triple-sub-list">
+                <li>5.2.1 Template Element</li>
+                <li>5.2.2 Custom Elements</li>
+                <li>5.2.3 Shadow DOM</li>
+                <li>5.2.4 HTML Imports</li>
+              </ul>
+              <li>5.3 Polyfilling</li>
+              <ul class="triple-sub-list">
+                <li>5.3.1 Polymer</li>
+                <li>5.3.2 X-Tag</li>
+                <li>5.3.3 Bosonic</li>
+              </ul>
+              <li>5.4 Accessibility</li>
+              <ul class="triple-sub-list">
+                <li>5.4.1 Custom Elments</li>
+                <li>5.4.2 Shadow DOM</li>
+              </ul>
+            </ul>
+          </li>
+          <li>
+            <div>
+              6. Conclusion
+            </div>
+          </li>
+          <li>
+            <div>
+              7. Sources
+            </div>
+          </li>
+
+        </ul>
+      </nav>
+      <section class="post-content">
+        <p>asdasda</p>
       </section>
     </article>
   </main>
+
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script>
+    var $subList       = $('.sub-list'),
+        $tripleSubList = $('.triple-sub-list');
+
+    $subList.hide();
+    $tripleSubList.hide();
+
+    $('.main-chapter i').on('click', function() {
+      var $chapter = $(this).closest('li'),
+          $currentSubList = $chapter.find('.sub-list');
+      $currentSubList.slideToggle('fast');
+    })
+
+  </script>
 </body>
 </html>
