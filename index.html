@@ -23,6 +23,18 @@
         </h2>
 
       </header>
+
+      <div class="sticky-nav">
+        <span class="vert-bar"></span>
+        <span data-target="1" data-size="xxl" class="chapters circle-xxl active"></span>
+        <span data-target="2" data-size="xl" class="chapters circle-xl"></span>
+        <span data-target="3" data-size="l" class="chapters circle-l"></span>
+        <span data-target="4" data-size="m" class="chapters circle-m"></span>
+        <span data-target="5" data-size="s" class="chapters circle-s"></span>
+        <span data-target="6" data-size="xs" class="chapters circle-xs"></span>
+        <span data-target="7" data-size="xs" class="chapters circle-xs"></span>
+      </div>
+
       <nav role="nav" class="table-of-contents">
         <h3>
           Table of Contents
@@ -142,155 +154,212 @@
         </ul>
       </nav>
       <section class="post-content">
-        <h3>
-          Introduction
-        </h3>
-        <p>
-          The goal of this discussion is to review the new and exciting technologies being specified in
-        the web platform today, specifically Web Components. These technologies allow developers to
-        create easily maintainable user interfaces that are simple, semantic and reusable. These changes
-        however don’t yet enjoy full support from the community or browser vendors and are not yet widely
-        practiced. This raises some questions: is this really the future of web development? Has this been
-        done before? What are the problems these techniques solve? <br><br>
-        This paper plans on answering these questions by investigating the ideas behind modular design
-        and the web platform ecosystem. Each Web Components technology will be examined to better
-        understand how these technologies can solve current development problems and how they all fit
-        together. Lastly, a review of current issues and implementation will be made. By the end of this
-        paper all of these concepts and how they work together will have been explored. It is important to
-        determine where web development stands today in order to better understand where it might be
-        heading in the future. <br><br>
-        This paper will discuss ideas and technologies that are very young and not yet standardized or well
-        established. Many of the resources that will be used are still in draft, not yet complete, or not yet
-        formally published. However, the specification process of the W3C and related working groups is
-        integral to innovation on the web, which is a primary focus of this paper.
-        </p>
+        <div data-id="1" class="chapter-section">
+          <h3>
+            <a href="introduction">Introduction</a>
+          </h3>
+          <p>
+            The goal of this discussion is to review the new and exciting technologies being specified in
+          the web platform today, specifically Web Components. These technologies allow developers to
+          create easily maintainable user interfaces that are simple, semantic and reusable. These changes
+          however don’t yet enjoy full support from the community or browser vendors and are not yet widely
+          practiced. This raises some questions: is this really the future of web development? Has this been
+          done before? What are the problems these techniques solve? <br><br>
+          This paper plans on answering these questions by investigating the ideas behind modular design
+          and the web platform ecosystem. Each Web Components technology will be examined to better
+          understand how these technologies can solve current development problems and how they all fit
+          together. Lastly, a review of current issues and implementation will be made. By the end of this
+          paper all of these concepts and how they work together will have been explored. It is important to
+          determine where web development stands today in order to better understand where it might be
+          heading in the future. <br><br>
+          This paper will discuss ideas and technologies that are very young and not yet standardized or well
+          established. Many of the resources that will be used are still in draft, not yet complete, or not yet
+          formally published. However, the specification process of the W3C and related working groups is
+          integral to innovation on the web, which is a primary focus of this paper.
+          </p>
+        </div>
 
-        <h3>The Web Today</h3>
-        <p>
-        Since the birth of the world wide web in the late 1980’s, major transformations in how
-        people and companies relate to each other and share information have occured. This transformation
-        can now be seen in almost any major pillar of society - mass availability of information has improved our education system and enabled a more informed public, entertainment has become democratized
-        by allowing anyone to be a publisher and the way in which we consume and do business do not
-        even resemble the structures that they had less than a quarter century ago (Jaffe, 2014a). Websites
-        have evolved from static documents into dynamic applications used across different browsers,
-        devices and operating systems. This has been enabled through a collection of open (royalty-free)
-        technologies known as the Open Web Platform, built on a core of HTML, CSS and JavaScript. <br><br>
-        Today, with the introduction of many different web-enabled devices, many products and companies
-        are moving their web-based apps to proprietery mobile platforms. This is notable when looking at
-        significant tech products and companies such as Instagram, WhatsApp and SnapChat that are either
-        native only or with web as second consideration. Native applications talk directly to the operating
-        system giving them speed and capabilites not yet possible on web apps. Today, web applications are
-        often perceived as slow, bloated and expensive in comparison with native applications. To keep up
-        with native apps, the web platform must continue to grow and add new features (Gasston, 2015).
-        </p>
+        <div data-id="2" class="chapter-section">
 
-        <h4>Evolving Specifications</h4>
+          <h3><a href="the-web-today">The Web Today</a></h3>
+          <p>
+          Since the birth of the world wide web in the late 1980’s, major transformations in how
+          people and companies relate to each other and share information have occured. This transformation
+          can now be seen in almost any major pillar of society - mass availability of information has improved our education system and enabled a more informed public, entertainment has become democratized
+          by allowing anyone to be a publisher and the way in which we consume and do business do not
+          even resemble the structures that they had less than a quarter century ago (Jaffe, 2014a). Websites
+          have evolved from static documents into dynamic applications used across different browsers,
+          devices and operating systems. This has been enabled through a collection of open (royalty-free)
+          technologies known as the Open Web Platform, built on a core of HTML, CSS and JavaScript. <br><br>
+          Today, with the introduction of many different web-enabled devices, many products and companies
+          are moving their web-based apps to proprietery mobile platforms. This is notable when looking at
+          significant tech products and companies such as Instagram, WhatsApp and SnapChat that are either
+          native only or with web as second consideration. Native applications talk directly to the operating
+          system giving them speed and capabilites not yet possible on web apps. Today, web applications are
+          often perceived as slow, bloated and expensive in comparison with native applications. To keep up
+          with native apps, the web platform must continue to grow and add new features (Gasston, 2015).
+          </p>
 
-        <p>
-          As the web began to grow, so did the need for global interoperability, accessibility, stability
-          and quality-control. This lead to the creation of the World Wide Web Consortium (W3C) in
-          1994 (Jaffe, 2014b). Ever since then, the W3C has been bringing together groups of diverse stakeholders
-          and public experts to write the technical specifications and guidelines for the web platform.
-          The specification process can often take months to years, followed by careful implementation by
-          browsers. These delays lead to a stagnating effect on new features in the platform. (Larson, 2015:14).
-          Lack of new features prevents the web from moving forward and thus creates major gaps in what
-          web developers can do compared to native apps. <br><br>
-          The Extensible Web Group, which was formed in 2013, has been trying to solve this problem by
-          allowing new low-level features to be implemented in browsers without waiting for the specs to
-          be finished. This is done by adding the new features with currently available JavaScript, also called
-          polyfilling (Remy, 2013). This allows developers to start using new features right away, including
-          Web Components.
-        </p>
+          <h4>Evolving Specifications</h4>
 
-        <h4>
-          Modular Design
-        </h4>
+          <p>
+            As the web began to grow, so did the need for global interoperability, accessibility, stability
+            and quality-control. This lead to the creation of the World Wide Web Consortium (W3C) in
+            1994 (Jaffe, 2014b). Ever since then, the W3C has been bringing together groups of diverse stakeholders
+            and public experts to write the technical specifications and guidelines for the web platform.
+            The specification process can often take months to years, followed by careful implementation by
+            browsers. These delays lead to a stagnating effect on new features in the platform. (Larson, 2015:14).
+            Lack of new features prevents the web from moving forward and thus creates major gaps in what
+            web developers can do compared to native apps. <br><br>
+            The Extensible Web Group, which was formed in 2013, has been trying to solve this problem by
+            allowing new low-level features to be implemented in browsers without waiting for the specs to
+            be finished. This is done by adding the new features with currently available JavaScript, also called
+            polyfilling (Remy, 2013). This allows developers to start using new features right away, including
+            Web Components.
+          </p>
 
-        <p>
-          It is clear that developers are constantly looking to add structure and efficiency when
-          designing web applications, which is where modular-based design comes in. Modularity is an
-          important design principle, well known in the back-end programming world for some time.
-          The ISO/IEC/IEEE define modularity as “The degree to which a system or computer program is
-          composed of discrete components
-          such that a change to one component has minimal impact on other components” (ISO/IEC/IEEE,
-          2010). The general goal of modularity is that the modules are extensible, reusable and maintainable
-          (Meyer, 2007). These principles bring many advantages not only to back-end programming but to
-          the front-end as well. <br><br>
-          Modular components can be placed into any system and work as expected without conflicting with
-          other parts. By making a web application modular, developers are ensuring that a clean foundation
-          is set for their project. In the future new developers would not need to know the details of how each
-          module works in order to use it (Berners, 2008). Often, in large projects, changes may be required.
-          The ability to add new components without breaking the existing code base is crucial in modern
-          web development (Cargnelutti, 2008).
-        </p>
+          <h4>
+            Modular Design
+          </h4>
 
-        <h4>
-          What needs Fixing?
-        </h4>
+          <p>
+            It is clear that developers are constantly looking to add structure and efficiency when
+            designing web applications, which is where modular-based design comes in. Modularity is an
+            important design principle, well known in the back-end programming world for some time.
+            The ISO/IEC/IEEE define modularity as “The degree to which a system or computer program is
+            composed of discrete components
+            such that a change to one component has minimal impact on other components” (ISO/IEC/IEEE,
+            2010). The general goal of modularity is that the modules are extensible, reusable and maintainable
+            (Meyer, 2007). These principles bring many advantages not only to back-end programming but to
+            the front-end as well. <br><br>
+            Modular components can be placed into any system and work as expected without conflicting with
+            other parts. By making a web application modular, developers are ensuring that a clean foundation
+            is set for their project. In the future new developers would not need to know the details of how each
+            module works in order to use it (Berners, 2008). Often, in large projects, changes may be required.
+            The ability to add new components without breaking the existing code base is crucial in modern
+            web development (Cargnelutti, 2008).
+          </p>
 
-        <p>
-          As discussed earlier the web is in a transitional state of constant growth and evolution. The
-          web platform is already being widely used as an application platform. Developers now have a huge
-          selection of libraries and frameworks available to ease application development. However, with such
-          a large selection it can be challenging to keep up to date and to know what the appropriate tool for
-          any specific job is. Not only that but these component libraries are not always interoperable and can
-          cause conflicts when mixing and matching. (Dodson, 2015) Problems can also be found in the core
-          of the web platform itself, CSS, HTML and JS. Next, the major issues of the web platform will be
-          reviewed.
-        </p>
+          <h4>
+            What needs Fixing?
+          </h4>
 
-        <h5>
-          Coupling and Seperation of Concerns
-        </h5>
+          <p>
+            As discussed earlier the web is in a transitional state of constant growth and evolution. The
+            web platform is already being widely used as an application platform. Developers now have a huge
+            selection of libraries and frameworks available to ease application development. However, with such
+            a large selection it can be challenging to keep up to date and to know what the appropriate tool for
+            any specific job is. Not only that but these component libraries are not always interoperable and can
+            cause conflicts when mixing and matching. (Dodson, 2015) Problems can also be found in the core
+            of the web platform itself, CSS, HTML and JS. Next, the major issues of the web platform will be
+            reviewed.
+          </p>
 
-        <p>
-          The traditional computer science idea of separation of concerns says that each section of an
-          application should only be responsible for one thing and should not contain code that deals with
-          other things. This principle is meant to break down applications into smaller units of encapsulated
-          functionality and reduce complexity (Elliot, 2014:99). JS, HTML and CSS are each layers of the
-          web platform that under the decoupling principle should be separated. However, this is not often
-          the case. The problem is that HTML, CSS and JS are by nature built to interact with each other. <br><br>
-          Large projects have trouble keeping their code modular, which often results in tight coupling
-          between their HTML, CSS and JS. By not following the principle of separation of concerns, changes
-          to one part of a project can inadvertently break unrelated parts elsewhere. This tight coupling is
-          most often caused by overly complex CSS selectors. When the CSS file defines complex selectors
-          it is often necessary for them to match the HTML structure, thus tightly coupling the styles to the
-          markup. Furthermore, JavaScript can also become coupled when needing to select elements using
-          the complex selectors. <br><br>
-          It is possible to loosen the tight coupling by connecting the HTML, JS and CSS through
-          thoughtfully named classes that express their intention and reflect their chosen purpose. However,
-          many developers feel using classes that relate to presentation is bad practice and goes againt the
-          HTML5 specification section on classes (Walton, 2013a).
-        </p>
+          <h5>
+            Coupling and Seperation of Concerns
+          </h5>
 
-        <h5>Conflicting CSS</h5>
+          <p>
+            The traditional computer science idea of separation of concerns says that each section of an
+            application should only be responsible for one thing and should not contain code that deals with
+            other things. This principle is meant to break down applications into smaller units of encapsulated
+            functionality and reduce complexity (Elliot, 2014:99). JS, HTML and CSS are each layers of the
+            web platform that under the decoupling principle should be separated. However, this is not often
+            the case. The problem is that HTML, CSS and JS are by nature built to interact with each other. <br><br>
+            Large projects have trouble keeping their code modular, which often results in tight coupling
+            between their HTML, CSS and JS. By not following the principle of separation of concerns, changes
+            to one part of a project can inadvertently break unrelated parts elsewhere. This tight coupling is
+            most often caused by overly complex CSS selectors. When the CSS file defines complex selectors
+            it is often necessary for them to match the HTML structure, thus tightly coupling the styles to the
+            markup. Furthermore, JavaScript can also become coupled when needing to select elements using
+            the complex selectors. <br><br>
+            It is possible to loosen the tight coupling by connecting the HTML, JS and CSS through
+            thoughtfully named classes that express their intention and reflect their chosen purpose. However,
+            many developers feel using classes that relate to presentation is bad practice and goes againt the
+            HTML5 specification section on classes (Walton, 2013a).
+          </p>
 
-        <p>
-          A major problem with CSS lies in the fact that every CSS selector is global. This means
-          every CSS rule that is written has the potential to affect entirely unrelated parts of the application.
-          This behavior can cause many problems, including inheritance conflicts, such as rules applied to
-          parent elements affecting child component elements or, inversely, rules from components leaking
-          and affecting other elements. Additionally, problems can arise from naming conflicts, which is
-          when the same class or ID is used by an author unknowingly, thus causing styles to be applied to the
-          wrong element. This can be made even worse if JavaScript applies unwanted behaviour to selectors
-          that have naming conflicts (Gasston, 2013:192). <br><br>
-          There are however, many techniques for avoiding these conflicts such as specific naming conventions
-          and logical structure. However these techniques do not solve the underlying global issue and
-          conflicts can still occur, especially in large applications or when multiple people are working on a
-          single project (Walton, 2013b).
-        </p>
+          <h5>Conflicting CSS</h5>
 
-        <h5>Extensible HTML</h5>
+          <p>
+            A major problem with CSS lies in the fact that every CSS selector is global. This means
+            every CSS rule that is written has the potential to affect entirely unrelated parts of the application.
+            This behavior can cause many problems, including inheritance conflicts, such as rules applied to
+            parent elements affecting child component elements or, inversely, rules from components leaking
+            and affecting other elements. Additionally, problems can arise from naming conflicts, which is
+            when the same class or ID is used by an author unknowingly, thus causing styles to be applied to the
+            wrong element. This can be made even worse if JavaScript applies unwanted behaviour to selectors
+            that have naming conflicts (Gasston, 2013:192). <br><br>
+            There are however, many techniques for avoiding these conflicts such as specific naming conventions
+            and logical structure. However these techniques do not solve the underlying global issue and
+            conflicts can still occur, especially in large applications or when multiple people are working on a
+            single project (Walton, 2013b).
+          </p>
 
-        <p>
-          HTML has come a long way since the W3C published HTML 4.0 in 1997. Originally
-          created to build static technical documents, HTML is now used to create rich web applications,
-          which is something that it was never designed to do (Berners-Lee, 1989). That said, HTML has
-          experienced a lot of progress - today HTML5 has over 100 elements available. However, even with the large range of elements available, HTML5 without Web Components has neither a way
-          for authors to define their own elements with unique APIs nor a way to extend existing elements.
-          Without the ability to natively create custom elements, the creation of rich user interfaces is more
-          difficult than it could be.
-        </p>
+          <h5>Extensible HTML</h5>
+
+          <p>
+            HTML has come a long way since the W3C published HTML 4.0 in 1997. Originally
+            created to build static technical documents, HTML is now used to create rich web applications,
+            which is something that it was never designed to do (Berners-Lee, 1989). That said, HTML has
+            experienced a lot of progress - today HTML5 has over 100 elements available. However, even with the large range of elements available, HTML5 without Web Components has neither a way
+            for authors to define their own elements with unique APIs nor a way to extend existing elements.
+            Without the ability to natively create custom elements, the creation of rich user interfaces is more
+            difficult than it could be.
+          </p>
+
+          <h4><a href="">Solutions</a></h4>
+
+          <p>
+            Although these problems are much easier to work around using today’s modern frameworks,
+            libraries and APIs, they do not solve the underlying problems. In order for the web to progress and
+            make development of applications easier there needs to be a better, standardized solution. These
+            problems could be solved if there was a way to make modular, natively extensible, and encapsulated
+            components that are supported accross any device and system, which is where Web Components
+            come in. <br><br>
+            Web Components can be used in multiple applications and provide interoperability between
+            frameworks making them reusable and modular. In fact, the entire component’s markup can be
+            placed inside a template which follows the separation of concerns principle, thus minimizing tight
+            coupling and increasing maintainability of code. Web Components also prevent inheritance and
+            naming conflicts by seperating the component from the rest of the DOM (Document Object
+            Model), also known as encapsulation. This is enabled through the Shadow DOM which provides
+            a private scope rather than a global one. Lastly, Web Components give authors a way to natively
+            create new elements and extend HTML. (Patel, 2015:2).
+          </p>
+        </div>
+        <div data-id="3" class="chapter-section">
+           <h3><a href="the-web-today">What are Web Components</a></h3>
+
+           <p>
+             Web Components cannot be summarized as a single thing - but rather a collection of complementary technologies for encapsulating markup, script, and styles intoroduction reusable packages, with native support available in the browser (Buckett, 2015:2). Currently this technology is still
+            being specified by the W3C and is only fully supported by Chrome 26+ and Opera 15+. However,
+            the Google Chrome Team and many influential web developers including Eric Bidelman, Addy
+            Osmani and Dimitri Glazkov are the leading advocates helping to push the process along.
+            <br><br>
+            This section will discuss how and why web components came about and provide a brief overview of
+            how they work. In closing, examples of ways in which we can use this technology will be presented.
+           </p>
+
+           <h4>history</h4>
+
+           <p>
+             Originally, the term “web components” was used by Microsoft to describe their add-ons to
+            Office. Then Sun, now called Oracle, used it to describe Java servlets. Apparently you could even
+            get some kind of certification as a “web component” developer from Sun Microsystems (Shapiro,
+            D. 2015:8). The word “component” is also not a new one when it comes to CBSE (Component
+            Based Software Engineering), which is based on the approach of developing software systems by
+            selecting already available components and then assembling them using a well defined software
+            architecture (Kaur and Mann, 2010). Since the beginning of 2011 and also currently, the term
+            “Web Components” has been used to refer to the new W3C standards. <br><br>
+            The development of modern “Web Components” can be traced back to 2005, with the beginning of
+            the „AJAX“ revolution and server side RAD (Rapid Application Development) frameworks such as
+            Ruby on Rails, CakePHP and Django. These technologies helped advance front-end development
+            by delivering content asynchronously while maintaining performance and enabling websites to be
+            built in weeks rather than months (Shapiro, 2016:4). Additionally, in 2005, the DOJO toolkit was
+            released, allowing developers to add widgets to their websites with only a few lines of code. This
+            further underscored the advantages of creating reusable modules.
+           </p>
+        </div>
       </section>
     </article>
   </main>
@@ -317,6 +386,110 @@
         $icon.addClass('fa-caret-down');
       }
     });
+
+
+    var sections = $('.chapter-section'),
+             nav = $('.sticky-nav'),
+        $navItems = $('.chapters');
+
+  $(window).on('scroll', function () {
+
+    var cur_pos = $(this).scrollTop() + 300;
+    sections.each(function() {
+
+
+      var sectionTop = $(this).offset(),
+          bottom = sectionTop.top + $(this).outerHeight();
+
+
+
+      if (cur_pos >= sectionTop.top && cur_pos < bottom) {
+        $navItems.removeClass('active');
+        $sectionId = $(this).attr('data-id');
+
+        $navItem = nav.find('[data-target="'+$sectionId+'"]');
+        $navItem.addClass('active');
+
+
+
+          var $nextItem = $navItem.next();
+          nextSize = $nextItem.data('size');
+          $nextItem.removeClass('circle-'+nextSize);
+          $nextItem.addClass('circle-xl');
+          $nextItem.attr('data-size', 'circle-xl');
+
+          var $previousItem = $navItem.prev('.chapters');
+          previousSize = $previousItem.data('size');
+          $previousItem.removeClass('circle-'+previousSize);
+          $previousItem.addClass('circle-xl');
+          $previousItem.attr('data-size', 'circle-xl');
+
+          var $secondNextItem = $nextItem.next();
+          secondNextSize = $secondNextItem.data('size');
+          $secondNextItem.removeClass('circle-'+secondNextSize);
+          $secondNextItem.addClass('circle-l');
+          $secondNextItem.attr('data-size', 'circle-l');
+
+          var $secondPreviousItem = $previousItem.prev('.chapters');
+          secondPreviousSize = $secondPreviousItem.data('size');
+          $secondPreviousItem.removeClass('circle-'+secondPreviousSize);
+          $secondPreviousItem.addClass('circle-l');
+          $secondPreviousItem.attr('data-size', 'circle-l');
+
+          var $thirdNextItem = $secondNextItem.next();
+          thirdNextItem = $thirdNextItem.data('size');
+          $thirdNextItem.removeClass('circle-'+thirdNextItem);
+          $thirdNextItem.addClass('circle-m');
+          $thirdNextItem.attr('data-size', 'circle-m');
+
+          var $thirdPreviousItem = $secondPreviousItem.prev('.chapters');
+          thirdPreviousItem = $thirdPreviousItem.data('size');
+          $thirdPreviousItem.removeClass('circle-'+thirdPreviousItem);
+          $thirdPreviousItem.addClass('circle-m');
+          $thirdPreviousItem.attr('data-size', 'circle-m');
+
+          var $fourthNextItem = $thirdNextItem.next();
+          fourthNextSize = $fourthNextItem.data('size');
+          $fourthNextItem.removeClass('circle-'+fourthNextSize);
+          $fourthNextItem.addClass('circle-s');
+          $fourthNextItem.attr('data-size', 'circle-s');
+
+          var $fourthPreviousItem = $thirdPreviousItem.prev('.chapters');
+          fourthPreviousSize = $previousItem.data('size');
+          $fourthPreviousItem.removeClass('circle-'+fourthPreviousSize);
+          $fourthPreviousItem.addClass('circle-s');
+          $fourthPreviousItem.attr('data-size', 'circle-s');
+
+          var $fifthNextItem = $fourthNextItem.next();
+          fifthNextItem = $fifthNextItem.data('size');
+          $fifthNextItem.removeClass('circle-'+fifthNextItem);
+          $fifthNextItem.addClass('circle-s');
+          $fifthNextItem.attr('data-size', 'circle-s');
+
+          var $fifthPreviousItem = $fourthNextItem.prev('.chapters');
+          fifthNextSize = $fifthPreviousItem.data('size');
+          $fifthPreviousItem.removeClass('circle-'+fifthNextSize);
+          $fifthPreviousItem.addClass('circle-s');
+          $fifthPreviousItem.attr('data-size', 'circle-s');
+
+
+
+      }
+
+    });
+  });
+
+
+  // nav.find('a').on('click', function () {
+  //   var $el = $(this)
+  //     , id = $el.attr('href');
+
+  //   $('html, body').animate({
+  //     scrollTop: $(id).offset().top - nav_height
+  //   }, 500);
+
+  //   return false;
+  // });
 
   </script>
 </body>
