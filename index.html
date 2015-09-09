@@ -27,7 +27,7 @@
         <h3>
           Table of Contents
         </h3>
-        <ul>
+        <ul class="table-contents">
           <li>
             <div class="main-chapter">
               <a href="">1. Introduction </a>
@@ -35,7 +35,8 @@
           </li>
           <li>
             <div class="main-chapter">
-              <a href="">2. The Web Today</a><i class="fa fa-caret-down"></i>
+              <a href="">2. The Web Today</a>
+              <i class="fa fa-caret-down"></i>
             </div>
             <ul class="sub-list">
               <li>2.1 Evolving Specifications</li>
@@ -51,7 +52,8 @@
           </li>
           <li>
             <div class="main-chapter">
-              3. What are Web Components
+              <a href="">3. What are Web Components</a>
+              <i class="fa fa-caret-down"></i>
             </div>
             <ul class="sub-list">
               <li>3.2 History</li>
@@ -62,7 +64,8 @@
           </li>
           <li>
             <div class="main-chapter">
-              4. The Building Blocks
+              <a href="">4. The Building Blocks</a>
+              <i class="fa fa-caret-down"></i>
             </div>
             <ul class="sub-list">
               <li>4.1 HTML Templates</li>
@@ -100,7 +103,8 @@
           </li>
           <li>
             <div class="main-chapter">
-              5. Are We Ready For Web Components?
+              <a href="">5. Are We Ready For Web Components?</a>
+              <i class="fa fa-caret-down"></i>
             </div>
             <ul class="sub-list">
               <li>5.1 Current Support</li>
@@ -126,19 +130,40 @@
           </li>
           <li>
             <div>
-              6. Conclusion
+              <a href="">6. Conclusion</a>
             </div>
           </li>
           <li>
             <div>
-              7. Sources
+              <a href="">7. Sources</a>
             </div>
           </li>
 
         </ul>
       </nav>
       <section class="post-content">
-        <p>asdasda</p>
+        <h3>
+          Introduction
+        </h3>
+        <p>
+          The goal of this paper is to review the new and exciting technologies being specified in
+        the web platform today, specifically Web Components. These technologies allow developers to
+        create easily maintainable user interfaces that are simple, semantic and reusable. These changes
+        however don’t yet enjoy full support from the community or browser vendors and are not yet widely
+        practiced. This raises some questions: is this really the future of web development? Has this been
+        done before? What are the problems these techniques solve? <br><br>
+        This paper plans on answering these questions by investigating the ideas behind modular design
+        and the web platform ecosystem. Each Web Components technology will be examined to better
+        understand how these technologies can solve current development problems and how they all fit
+        together. Lastly, a review of current issues and implementation will be made. By the end of this
+        paper all of these concepts and how they work together will have been explored. It is important to
+        determine where web development stands today in order to better understand where it might be
+        heading in the future. <br><br>
+        This paper will discuss ideas and technologies that are very young and not yet standardized or well
+        established. Many of the resources that will be used are still in draft, not yet complete, or not yet
+        formally published. However, the specification process of the W3C and related working groups is
+        integral to innovation on the web, which is a primary focus of this paper.
+        </p>
       </section>
     </article>
   </main>
@@ -149,13 +174,22 @@
         $tripleSubList = $('.triple-sub-list');
 
     $subList.hide();
-    $tripleSubList.hide();
+    // $tripleSubList.hide();
 
     $('.main-chapter i').on('click', function() {
       var $chapter = $(this).closest('li'),
           $currentSubList = $chapter.find('.sub-list');
-      $currentSubList.slideToggle('fast');
-    })
+      $currentSubList.slideToggle();
+
+      $icon = $(this);
+      if($icon.hasClass('fa-caret-down')) {
+        $icon.addClass('fa-caret-up');
+        $icon.removeClass('fa-caret-down');
+      } else {
+        $icon.removeClass('fa-caret-up');
+        $icon.addClass('fa-caret-down');
+      }
+    });
 
   </script>
 </body>

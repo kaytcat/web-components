@@ -7,7 +7,7 @@ body, html {
 
 body {
   font-family: 'Domine', serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.5;
   color: #464646;
@@ -30,6 +30,12 @@ h2 {
   margin: 10px 0;
 }
 
+.post-content h3 {
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+
 .post-data,
 .post-data a {
   color: #00B379;
@@ -38,18 +44,18 @@ h2 {
 header {
   margin-bottom: 25px;
   padding-bottom: 25px;
-  text-align: center;
   border-bottom: 1px solid #e3e3e3;
 }
 
 article {
   width: 80%;
-  max-width: 800px;
+  max-width: 700px;
   margin: 10% auto;
 }
 
 .table-of-contents {
-  margin-top: 10%;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e3e3e3;
 }
 
 .table-of-contents a {
@@ -77,6 +83,20 @@ article {
 
 .table-of-contents li {
   list-style-type: none;
+}
+
+.table-contents {
+  padding-left: 25px;
+}
+
+.table-contents li {
+
+}
+
+.post-content p {
+  line-height: 2;
+  text-align: justify;
+  text-indent: 50px;
 }
 
 
