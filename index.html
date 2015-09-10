@@ -25,14 +25,14 @@
       </header>
 
       <div class="sticky-nav">
-        <span class="vert-bar"></span>
-        <span data-target="1" data-size="xxl" class="chapters circle-xxl active"></span>
-        <span data-target="2" data-size="xl" class="chapters circle-xl"></span>
-        <span data-target="3" data-size="l" class="chapters circle-l"></span>
-        <span data-target="4" data-size="m" class="chapters circle-m"></span>
-        <span data-target="5" data-size="s" class="chapters circle-s"></span>
-        <span data-target="6" data-size="xs" class="chapters circle-xs"></span>
-        <span data-target="7" data-size="xs" class="chapters circle-xs"></span>
+        <!-- <span class="vert-bar"></span> -->
+        <span data-target="1" class="chapters circle-xxl active"></span>
+        <span data-target="2" class="chapters circle-xl"></span>
+        <span data-target="3" class="chapters circle-l"></span>
+        <span data-target="4" class="chapters circle-m"></span>
+        <span data-target="5" class="chapters circle-s"></span>
+        <span data-target="6" class="chapters circle-xs"></span>
+        <span data-target="7" class="chapters circle-xxs"></span>
       </div>
 
       <nav role="nav" class="table-of-contents">
@@ -358,6 +358,93 @@
             built in weeks rather than months (Shapiro, 2016:4). Additionally, in 2005, the DOJO toolkit was
             released, allowing developers to add widgets to their websites with only a few lines of code. This
             further underscored the advantages of creating reusable modules.
+            <br><br>
+            In 2006 the JavaScript library jQuery was revealed. This library allowed developers to write JavaScript
+            programs leveraging a simplified API for DOM interaction across a large range of web browsers. This
+            helped kick off the era of “single page apps”. Accompanying the success of jQuery came many other
+            front-end libraries, toolkits and frameworks including YUI, Prototype and Extjs - each including
+            their own stock widget libraries. The time period around 2010 saw major progress in client-side
+            development and the popularity of single page apps, which lead to client-side implementations of
+            MV*(Model View Whatever) patterns. Here, the importance of reusable and well-encapsulated UI
+            components became increasingly relevant due to code bloat in large-scale single page web apps and
+            front-end frameworks (Shapiro, 2016:9). <br><br>
+            Today these front-end libraries, toolkits and frameworks all appear to have major limitations - they
+            do not interact well together, nor can developers easily mix and match components from different
+            frameworks or libraries. Another major limitation when working with component based libraries
+            is the browser platforms themselves. If the browser vendors had successfully built capabilities to
+            encapsulate, package, and re-use code in HTML and DOM APIs before the AJAX revolution,
+            modern web development would perhaps be very different today. This is what Web Components
+            has to offer - native browser support for extending, packaging, encapsulating, and importing UI
+            components. <br><br>
+            Google has been the leading advocate for web components since the first W3C draft in May of
+            2012, which was edited by Google’s own Dimitri Glazkov and Hayato Ito. Google’s investment
+            in web components was made evident during 2013’s Google I/O where they announced Polymer,
+            their own library to build components. Since then, many resource websites such as webcomponents.
+            org and customelements.io and frameworks such as X-tag and Bosonic have appeared, enabling
+            modern implementation of web components with better browser support.
+           </p>
+
+          <h5>Has this been done before?</h5>
+
+            <p>
+              The idea of encapsulating components certainly solves many issues with the web platform.
+              It begs the question: why hasn’t this been done sooner? In fact, several past HTML component
+              technologies have been proposed, but not with much success. <br><br>
+              HTML Components (HTC for short) was proposed to the W3C by Microsoft in 1998. Microsoft felt
+              that with the absence of reusable HTML components, the growth of web application development
+              would be limitied (Wilson, 1998). Their proposal used a declarative model for attaching events
+              and APIs to a host element and then parsed components would be attached to a “viewlink”, which
+              would be comparable to today’s Shadow DOM. <br><br>
+              Mozilla also implemented their own version of web components with XBL 1.0 (Xenogamous
+              Binding Language) in 2001, and then followed up with a successor, XBL 2.0, in 2007. Similar to
+              Microsofts HTML Components, XBL declaratively describes the ability to associate elements in a
+              document with other HTML, JS and CSS (Hickson, 2012). <br><br>
+              After Microsoft’s and Mozilla’s failed attempts at creating web components, Google is now leading
+              the proposals. But these failed attempts did not go without notice. Both the documents from XBL
+              1.0 and XBL 2.0 provided tremendous insight into the problem of functional encapsulation and
+              greatly influenced the Shadow DOM specification (Glazkov and Ito, 2015a).
+            </p>
+
+            <h5>Overview</h5>
+
+            <p>
+              Each HTML element, whether it’s a <pre><button></pre>, <pre><ul></pre> or <pre><input></pre> element, has a defined API
+              and support built into the web browser. When you use these tags, the browser takes data supplied
+              from your markup, renders the element, and reacts accordingly to user and script actions (Buckett,2015:2). Elements range in complexity from simple <div>s to complex elements like the date
+              selector input element. The date selector is composed of many child elements that show and hide
+              in response to user input. Furthermore, all styling is already applied without additional css scripts
+              being imported and this styling does not leak to the rest of the page. The date selector shows how
+              an element itself encapsulates the internal markup, scripts and stylesheets. With web components
+              developers can build such elements through the use of four W3C specifications - Custom Elements,
+              HTML Templates, Shadow DOM and HTML Imports. These combined technologies allow
+              developers to encapsulate markup, scripts, and stylesheets into reusable packages, with native
+              support available in the browser.
+            </p>
+
+            <h5>Possibilities</h5>
+            <p>
+              Since web components are still in the drafting phase, changes are still to come. However, it
+              is possible to imagine how Web Components could change the foundation of web development.
+              As an example, imagine embedding a YouTube video using a <pre><youtube-video></pre> component or
+              displaying a Facebook profile on a web page or blog with a <pre><facebook-profile></pre>. By designing an
+              app in this way, it is possible to break an application down into the smallest reusable pieces of
+              functionality and then to recombine those pieces into a modular application. You can mix your
+              own components with those from third parties and other developers can take your components and
+              re-use them in their applications (Buckett, 2013:6-7). Entire applications can even be built using
+              a single component. This paradigm shift that componentization brings to web development could
+              also open the field to non-technical people, enabling pluggable components with little or no coding
+              knowledge required.
+            </p>
+        </div>
+        <div data-id="4" class="chapter-section">
+           <h3><a href="the-web-today">The Building Blocks</a></h3>
+
+           <p>
+             As discussed earlier, web components are made up of four W3C specifications, Custom Elmenets, HTML Templates, Shadow DOM and HTML Imports. These specifications are the
+            building blocks of what makes up Web Components. This section will review each of the four
+            current specifications in detail to better understand how this technology is extending the web
+            platform and helping with web development. It is important to note that these specifications are
+            not yet complete and are still being modified and reviewed.
            </p>
         </div>
       </section>
@@ -413,64 +500,45 @@
 
 
           var $nextItem = $navItem.next();
-          nextSize = $nextItem.data('size');
-          $nextItem.removeClass('circle-'+nextSize);
-          $nextItem.addClass('circle-xl');
-          $nextItem.attr('data-size', 'circle-xl');
+          $nextItem.removeClass().addClass('chapters circle-xl');
 
           var $previousItem = $navItem.prev('.chapters');
-          previousSize = $previousItem.data('size');
-          $previousItem.removeClass('circle-'+previousSize);
-          $previousItem.addClass('circle-xl');
-          $previousItem.attr('data-size', 'circle-xl');
+          $previousItem.removeClass().addClass('chapters circle-xl');
 
           var $secondNextItem = $nextItem.next();
-          secondNextSize = $secondNextItem.data('size');
-          $secondNextItem.removeClass('circle-'+secondNextSize);
-          $secondNextItem.addClass('circle-l');
-          $secondNextItem.attr('data-size', 'circle-l');
+          $secondNextItem.removeClass().addClass('chapters circle-l');
+
 
           var $secondPreviousItem = $previousItem.prev('.chapters');
-          secondPreviousSize = $secondPreviousItem.data('size');
-          $secondPreviousItem.removeClass('circle-'+secondPreviousSize);
-          $secondPreviousItem.addClass('circle-l');
-          $secondPreviousItem.attr('data-size', 'circle-l');
+          $secondPreviousItem.removeClass().addClass('chapters circle-l');
 
           var $thirdNextItem = $secondNextItem.next();
-          thirdNextItem = $thirdNextItem.data('size');
-          $thirdNextItem.removeClass('circle-'+thirdNextItem);
-          $thirdNextItem.addClass('circle-m');
-          $thirdNextItem.attr('data-size', 'circle-m');
+          $thirdNextItem.removeClass().addClass('chapters circle-m');
+
 
           var $thirdPreviousItem = $secondPreviousItem.prev('.chapters');
-          thirdPreviousItem = $thirdPreviousItem.data('size');
-          $thirdPreviousItem.removeClass('circle-'+thirdPreviousItem);
-          $thirdPreviousItem.addClass('circle-m');
-          $thirdPreviousItem.attr('data-size', 'circle-m');
+          $thirdPreviousItem.removeClass().addClass('chapters circle-m');
+
 
           var $fourthNextItem = $thirdNextItem.next();
-          fourthNextSize = $fourthNextItem.data('size');
-          $fourthNextItem.removeClass('circle-'+fourthNextSize);
-          $fourthNextItem.addClass('circle-s');
-          $fourthNextItem.attr('data-size', 'circle-s');
+          $fourthNextItem.removeClass().addClass('chapters circle-s');
+
 
           var $fourthPreviousItem = $thirdPreviousItem.prev('.chapters');
-          fourthPreviousSize = $previousItem.data('size');
-          $fourthPreviousItem.removeClass('circle-'+fourthPreviousSize);
-          $fourthPreviousItem.addClass('circle-s');
-          $fourthPreviousItem.attr('data-size', 'circle-s');
+          $fourthPreviousItem.removeClass().addClass('chapters circle-s');
 
           var $fifthNextItem = $fourthNextItem.next();
-          fifthNextItem = $fifthNextItem.data('size');
-          $fifthNextItem.removeClass('circle-'+fifthNextItem);
-          $fifthNextItem.addClass('circle-s');
-          $fifthNextItem.attr('data-size', 'circle-s');
+          $fifthNextItem.removeClass().addClass('chapters circle-xs');
 
-          var $fifthPreviousItem = $fourthNextItem.prev('.chapters');
-          fifthNextSize = $fifthPreviousItem.data('size');
-          $fifthPreviousItem.removeClass('circle-'+fifthNextSize);
-          $fifthPreviousItem.addClass('circle-s');
-          $fifthPreviousItem.attr('data-size', 'circle-s');
+          var $fifthPreviousItem = $fourthPreviousItem.prev('.chapters');
+          $fifthPreviousItem.removeClass().addClass('chapters circle-xs');
+
+
+          var $sixthNextItem = $fifthNextItem.next();
+          $sixthNextItem.removeClass().addClass('chapters circle-xxs');
+
+          var $sixthPreviousItem = $fifthPreviousItem.prev('.chapters');
+          $sixthPreviousItem.removeClass().addClass('chapters circle-xxs');
 
 
 
