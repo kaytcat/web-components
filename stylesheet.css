@@ -1,3 +1,22 @@
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+
 body, html {
   height: 100%;
   width: 100%;
@@ -60,11 +79,6 @@ header {
   border-bottom: 1px solid #e3e3e3;
 }
 
-article {
-  width: 80%;
-  max-width: 700px;
-  margin: 10% auto;
-}
 
 .table-of-contents {
   padding-bottom: 25px;
@@ -114,15 +128,6 @@ article {
 
 
 
-/* Sticky Nav */
-
-.sticky-nav {
-    position: fixed;
-    width: 25px;
-    left: 20%;
-    top: 50%;
-}
-
 .vert-bar {
   height: 100%;
   width: 1px;
@@ -131,6 +136,39 @@ article {
   display: block;
   left: 48%;
   position: absolute;
+}
+
+.col-left {
+ /* width: 25%;
+  float: left;
+ */ position: relative;
+}
+
+.container {
+  width: 50%;
+  position: relative;
+  margin: 0 auto;
+  left: 50px;
+}
+
+.main-content {
+  margin-top: 10%;
+}
+
+/* Sticky Nav */
+
+.sticky-nav {
+  position: fixed;
+  margin-top: 28px;
+}
+
+.nav-container {
+  display: block;
+  width: 225px;
+  height: 1px;
+  position: relative;
+  text-align: right;
+  left: -75px;
 }
 
 .chapters {
@@ -216,6 +254,96 @@ article {
 }
 
 
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 80%;
+    left: 0;
+  }
+
+  .nav-container {
+    left: -55px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .post-content h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 21px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  .sticky-nav {
+    left: 15px;
+  }
+
+  .container {
+    margin-right: auto;
+    margin-left: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+      font-size: 36px;
+    }
+
+    .post-data {
+      font-size: 14px;
+    }
+
+    header {
+      margin-bottom: 10px;
+    }
+
+    .table-of-contents {
+      padding-bottom: 10px;
+    }
+
+    .post-content h3 {
+      font-size: 26px;
+    }
+
+    .post-content p {
+      text-indent: 30px;
+    }
+
+    .post-content h4 {
+      font-size: 20px;
+    }
+
+    .post-content h5 {
+      font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .container {
+      width: 90%;
+      margin-left: auto;
+    }
+
+    .nav-container {
+      display: none;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+}
 
 
 

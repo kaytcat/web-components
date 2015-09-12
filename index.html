@@ -9,448 +9,463 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
-  <main role="main">
-    <article>
-      <header role="header" class="post-title">
-        <h1>
-          Web Components
-        </h1>
-        <div class="post-data">
-          28 August, 2015 - <a href="">Kaitlin Rathwell</a> - <a href="">Sources</a>
-        </div>
-        <h2>
-          A discussion surrounding Web Components and their <br> role in the future of web development.
-        </h2>
+  <main>
+    <div class="main-content cf">
 
-      </header>
 
-      <div class="sticky-nav">
-        <span class="vert-bar"></span>
-        <a href="#introduction"><span data-target="1" class="chapters circle-xxl active"></span></a>
-        <a href="#the-web-today"><span data-target="2" class="chapters circle-xl"></span></a>
-        <a href="#3"><span data-target="3" class="chapters circle-l"></span></a>
-        <a href="#4"><span data-target="4" class="chapters circle-m"></span></a>
-        <a href=""><span data-target="5" class="chapters circle-s"></span></a>
-        <a href=""><span data-target="6" class="chapters circle-xs"></span></a>
-        <a href=""><span data-target="7" class="chapters circle-xxs"></span></a>
+      <div class="container">
+
+        <article>
+          <header role="header" class="post-title">
+            <h1>
+              Web Components
+            </h1>
+            <div class="post-data">
+              28 August, 2015 - <a href="">Kaitlin Rathwell</a> - <a href="">Sources</a>
+            </div>
+            <h2>
+              A discussion surrounding Web Components and their role in the future of web development.
+            </h2>
+          </header>
+
+
+        <div class="col-left">
+          <div class="nav-container">
+            <div class="sticky-nav">
+              <span class="vert-bar"></span>
+              <a href="#introduction"><span data-target="1" class="chapters circle-xxl active"></span></a>
+              <a href="#the-web-today"><span data-target="2" class="chapters circle-xl"></span></a>
+              <a href="#3"><span data-target="3" class="chapters circle-l"></span></a>
+              <a href="#4"><span data-target="4" class="chapters circle-m"></span></a>
+              <a href=""><span data-target="5" class="chapters circle-s"></span></a>
+              <a href=""><span data-target="6" class="chapters circle-xs"></span></a>
+              <a href=""><span data-target="7" class="chapters circle-xxs"></span></a>
+            </div>
+          </div>
+
+
+          <nav role="nav" class="table-of-contents">
+            <h3>
+              Table of Contents
+            </h3>
+            <ul class="table-contents">
+              <li>
+                <div class="main-chapter">
+                  <a href="introduction">1. Introduction </a>
+                </div>
+              </li>
+              <li>
+                <div class="main-chapter">
+                  <a href="">2. The Web Today</a>
+                  <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="sub-list">
+                  <li>2.1 Evolving Specifications</li>
+                  <li>2.2 Modular Design</li>
+                  <li>2.3 What needs fixing?</li>
+                    <ul class="triple-sub-list">
+                      <li>2.3.1 Coupling and Seperation of Concerns</li>
+                      <li>2.3.2 Conflicting CSS</li>
+                      <li>2.3.3 Extensible HTML</li>
+                      <li>2.3.4 Solutions</li>
+                    </ul>
+                </ul>
+              </li>
+              <li>
+                <div class="main-chapter">
+                  <a href="">3. What are Web Components</a>
+                  <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="sub-list">
+                  <li>3.2 History</li>
+                  <li>3.2 Has this been done before?</li>
+                  <li>3.3 Overview</li>
+                  <li>3.4 Possibilities</li>
+                </ul>
+              </li>
+              <li>
+                <div class="main-chapter">
+                  <a href="">4. The Building Blocks</a>
+                  <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="sub-list">
+                  <li>4.1 HTML Templates</li>
+                  <ul class="triple-sub-list">
+                    <li>4.1.1 Advantages of HTML Templates</li>
+                    <li>4.1.2 How is it inert?</li>
+                    <li>4.1.3 Creating and initialization</li>
+                  </ul>
+                  <li>4.2 Custom Elements</li>
+                  <ul class="triple-sub-list">
+                    <li>4.2.1 Reistering new Elements</li>
+                    <li>4.2.2 Adding Prototypes</li>
+                    <li>4.2.3 Extending Elements</li>
+                    <li>4.2.4 Life Cycle Callbacks</li>
+                  </ul>
+                  <li>4.3 Shadow DOM</li>
+                  <ul class="triple-sub-list">
+                    <li>4.3.1 Trees of Trees</li>
+                    <li>4.3.2 Creating the Shadow DOM</li>
+                    <li>4.3.3 Distribution</li>
+                    <li>4.3.4 Events</li>
+                    <li>4.3.5 Styling</li>
+                  </ul>
+                  <li>4.4 HTML Imports</li>
+                  <ul class="triple-sub-list">
+                    <li>4.4.1 The Basics</li>
+                    <li>4.4.2 Parsing</li>
+                    <li>4.4.3 Accessing Imports</li
+                    >
+                    <li>4.4.4 Events</li>
+                    <li>4.4.5 Performance</li>
+                  </ul>
+                  <li>4.5 Working Together</li>
+                </ul>
+              </li>
+              <li>
+                <div class="main-chapter">
+                  <a href="">5. Are We Ready For Web Components?</a>
+                  <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="sub-list">
+                  <li>5.1 Current Support</li>
+                  <li>5.2 Issues and Future Specifications</li>
+                  <ul class="triple-sub-list">
+                    <li>5.2.1 Template Element</li>
+                    <li>5.2.2 Custom Elements</li>
+                    <li>5.2.3 Shadow DOM</li>
+                    <li>5.2.4 HTML Imports</li>
+                  </ul>
+                  <li>5.3 Polyfilling</li>
+                  <ul class="triple-sub-list">
+                    <li>5.3.1 Polymer</li>
+                    <li>5.3.2 X-Tag</li>
+                    <li>5.3.3 Bosonic</li>
+                  </ul>
+                  <li>5.4 Accessibility</li>
+                  <ul class="triple-sub-list">
+                    <li>5.4.1 Custom Elments</li>
+                    <li>5.4.2 Shadow DOM</li>
+                  </ul>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <a href="">6. Conclusion</a>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <a href="">7. Sources</a>
+                </div>
+              </li>
+
+            </ul>
+          </nav>
+          </div>
+
+          <section class="post-content">
+            <div data-id="1" class="chapter-section">
+              <h3 id="introduction">
+                Introduction
+              </h3>
+              <p>
+                The goal of this discussion is to review the new and exciting technologies being specified in
+              the web platform today, specifically Web Components. These technologies allow developers to
+              create easily maintainable user interfaces that are simple, semantic and reusable. These changes
+              however don’t yet enjoy full support from the community or browser vendors and are not yet widely
+              practiced. This raises some questions: is this really the future of web development? Has this been
+              done before? What are the problems these techniques solve? <br><br>
+              This paper plans on answering these questions by investigating the ideas behind modular design
+              and the web platform ecosystem. Each Web Components technology will be examined to better
+              understand how these technologies can solve current development problems and how they all fit
+              together. Lastly, a review of current issues and implementation will be made. By the end of this
+              paper all of these concepts and how they work together will have been explored. It is important to
+              determine where web development stands today in order to better understand where it might be
+              heading in the future. <br><br>
+              This paper will discuss ideas and technologies that are very young and not yet standardized or well
+              established. Many of the resources that will be used are still in draft, not yet complete, or not yet
+              formally published. However, the specification process of the W3C and related working groups is
+              integral to innovation on the web, which is a primary focus of this paper.
+              </p>
+            </div>
+
+            <div data-id="2" class="chapter-section">
+
+              <h3 id="the-web-today">
+                The Web Today
+              </h3>
+
+              <p>
+              Since the birth of the world wide web in the late 1980’s, major transformations in how
+              people and companies relate to each other and share information have occured. This transformation
+              can now be seen in almost any major pillar of society - mass availability of information has improved our education system and enabled a more informed public, entertainment has become democratized
+              by allowing anyone to be a publisher and the way in which we consume and do business do not
+              even resemble the structures that they had less than a quarter century ago (Jaffe, 2014a). Websites
+              have evolved from static documents into dynamic applications used across different browsers,
+              devices and operating systems. This has been enabled through a collection of open (royalty-free)
+              technologies known as the Open Web Platform, built on a core of HTML, CSS and JavaScript. <br><br>
+              Today, with the introduction of many different web-enabled devices, many products and companies
+              are moving their web-based apps to proprietery mobile platforms. This is notable when looking at
+              significant tech products and companies such as Instagram, WhatsApp and SnapChat that are either
+              native only or with web as second consideration. Native applications talk directly to the operating
+              system giving them speed and capabilites not yet possible on web apps. Today, web applications are
+              often perceived as slow, bloated and expensive in comparison with native applications. To keep up
+              with native apps, the web platform must continue to grow and add new features (Gasston, 2015).
+              </p>
+
+              <h4>Evolving Specifications</h4>
+
+              <p>
+                As the web began to grow, so did the need for global interoperability, accessibility, stability
+                and quality-control. This lead to the creation of the World Wide Web Consortium (W3C) in
+                1994 (Jaffe, 2014b). Ever since then, the W3C has been bringing together groups of diverse stakeholders
+                and public experts to write the technical specifications and guidelines for the web platform.
+                The specification process can often take months to years, followed by careful implementation by
+                browsers. These delays lead to a stagnating effect on new features in the platform. (Larson, 2015:14).
+                Lack of new features prevents the web from moving forward and thus creates major gaps in what
+                web developers can do compared to native apps. <br><br>
+                The Extensible Web Group, which was formed in 2013, has been trying to solve this problem by
+                allowing new low-level features to be implemented in browsers without waiting for the specs to
+                be finished. This is done by adding the new features with currently available JavaScript, also called
+                polyfilling (Remy, 2013). This allows developers to start using new features right away, including
+                Web Components.
+              </p>
+
+              <h4>
+                Modular Design
+              </h4>
+
+              <p>
+                It is clear that developers are constantly looking to add structure and efficiency when
+                designing web applications, which is where modular-based design comes in. Modularity is an
+                important design principle, well known in the back-end programming world for some time.
+                The ISO/IEC/IEEE define modularity as “The degree to which a system or computer program is
+                composed of discrete components
+                such that a change to one component has minimal impact on other components” (ISO/IEC/IEEE,
+                2010). The general goal of modularity is that the modules are extensible, reusable and maintainable
+                (Meyer, 2007). These principles bring many advantages not only to back-end programming but to
+                the front-end as well. <br><br>
+                Modular components can be placed into any system and work as expected without conflicting with
+                other parts. By making a web application modular, developers are ensuring that a clean foundation
+                is set for their project. In the future new developers would not need to know the details of how each
+                module works in order to use it (Berners, 2008). Often, in large projects, changes may be required.
+                The ability to add new components without breaking the existing code base is crucial in modern
+                web development (Cargnelutti, 2008).
+              </p>
+
+              <h4>
+                What needs Fixing?
+              </h4>
+
+              <p>
+                As discussed earlier the web is in a transitional state of constant growth and evolution. The
+                web platform is already being widely used as an application platform. Developers now have a huge
+                selection of libraries and frameworks available to ease application development. However, with such
+                a large selection it can be challenging to keep up to date and to know what the appropriate tool for
+                any specific job is. Not only that but these component libraries are not always interoperable and can
+                cause conflicts when mixing and matching. (Dodson, 2015) Problems can also be found in the core
+                of the web platform itself, CSS, HTML and JS. Next, the major issues of the web platform will be
+                reviewed.
+              </p>
+
+              <h5>
+                Coupling and Seperation of Concerns
+              </h5>
+
+              <p>
+                The traditional computer science idea of separation of concerns says that each section of an
+                application should only be responsible for one thing and should not contain code that deals with
+                other things. This principle is meant to break down applications into smaller units of encapsulated
+                functionality and reduce complexity (Elliot, 2014:99). JS, HTML and CSS are each layers of the
+                web platform that under the decoupling principle should be separated. However, this is not often
+                the case. The problem is that HTML, CSS and JS are by nature built to interact with each other. <br><br>
+                Large projects have trouble keeping their code modular, which often results in tight coupling
+                between their HTML, CSS and JS. By not following the principle of separation of concerns, changes
+                to one part of a project can inadvertently break unrelated parts elsewhere. This tight coupling is
+                most often caused by overly complex CSS selectors. When the CSS file defines complex selectors
+                it is often necessary for them to match the HTML structure, thus tightly coupling the styles to the
+                markup. Furthermore, JavaScript can also become coupled when needing to select elements using
+                the complex selectors. <br><br>
+                It is possible to loosen the tight coupling by connecting the HTML, JS and CSS through
+                thoughtfully named classes that express their intention and reflect their chosen purpose. However,
+                many developers feel using classes that relate to presentation is bad practice and goes againt the
+                HTML5 specification section on classes (Walton, 2013a).
+              </p>
+
+              <h5>Conflicting CSS</h5>
+
+              <p>
+                A major problem with CSS lies in the fact that every CSS selector is global. This means
+                every CSS rule that is written has the potential to affect entirely unrelated parts of the application.
+                This behavior can cause many problems, including inheritance conflicts, such as rules applied to
+                parent elements affecting child component elements or, inversely, rules from components leaking
+                and affecting other elements. Additionally, problems can arise from naming conflicts, which is
+                when the same class or ID is used by an author unknowingly, thus causing styles to be applied to the
+                wrong element. This can be made even worse if JavaScript applies unwanted behaviour to selectors
+                that have naming conflicts (Gasston, 2013:192). <br><br>
+                There are however, many techniques for avoiding these conflicts such as specific naming conventions
+                and logical structure. However these techniques do not solve the underlying global issue and
+                conflicts can still occur, especially in large applications or when multiple people are working on a
+                single project (Walton, 2013b).
+              </p>
+
+              <h5>Extensible HTML</h5>
+
+              <p>
+                HTML has come a long way since the W3C published HTML 4.0 in 1997. Originally
+                created to build static technical documents, HTML is now used to create rich web applications,
+                which is something that it was never designed to do (Berners-Lee, 1989). That said, HTML has
+                experienced a lot of progress - today HTML5 has over 100 elements available. However, even with the large range of elements available, HTML5 without Web Components has neither a way
+                for authors to define their own elements with unique APIs nor a way to extend existing elements.
+                Without the ability to natively create custom elements, the creation of rich user interfaces is more
+                difficult than it could be.
+              </p>
+
+              <h4><a href="">Solutions</a></h4>
+
+              <p>
+                Although these problems are much easier to work around using today’s modern frameworks,
+                libraries and APIs, they do not solve the underlying problems. In order for the web to progress and
+                make development of applications easier there needs to be a better, standardized solution. These
+                problems could be solved if there was a way to make modular, natively extensible, and encapsulated
+                components that are supported accross any device and system, which is where Web Components
+                come in. <br><br>
+                Web Components can be used in multiple applications and provide interoperability between
+                frameworks making them reusable and modular. In fact, the entire component’s markup can be
+                placed inside a template which follows the separation of concerns principle, thus minimizing tight
+                coupling and increasing maintainability of code. Web Components also prevent inheritance and
+                naming conflicts by seperating the component from the rest of the DOM (Document Object
+                Model), also known as encapsulation. This is enabled through the Shadow DOM which provides
+                a private scope rather than a global one. Lastly, Web Components give authors a way to natively
+                create new elements and extend HTML. (Patel, 2015:2).
+              </p>
+            </div>
+            <div data-id="3" class="chapter-section">
+               <h3><a href="the-web-today">What are Web Components</a></h3>
+
+               <p>
+                 Web Components cannot be summarized as a single thing - but rather a collection of complementary technologies for encapsulating markup, script, and styles intoroduction reusable packages, with native support available in the browser (Buckett, 2015:2). Currently this technology is still
+                being specified by the W3C and is only fully supported by Chrome 26+ and Opera 15+. However,
+                the Google Chrome Team and many influential web developers including Eric Bidelman, Addy
+                Osmani and Dimitri Glazkov are the leading advocates helping to push the process along.
+                <br><br>
+                This section will discuss how and why web components came about and provide a brief overview of
+                how they work. In closing, examples of ways in which we can use this technology will be presented.
+               </p>
+
+               <h4>history</h4>
+
+               <p>
+                 Originally, the term “web components” was used by Microsoft to describe their add-ons to
+                Office. Then Sun, now called Oracle, used it to describe Java servlets. Apparently you could even
+                get some kind of certification as a “web component” developer from Sun Microsystems (Shapiro,
+                D. 2015:8). The word “component” is also not a new one when it comes to CBSE (Component
+                Based Software Engineering), which is based on the approach of developing software systems by
+                selecting already available components and then assembling them using a well defined software
+                architecture (Kaur and Mann, 2010). Since the beginning of 2011 and also currently, the term
+                “Web Components” has been used to refer to the new W3C standards. <br><br>
+                The development of modern “Web Components” can be traced back to 2005, with the beginning of
+                the „AJAX“ revolution and server side RAD (Rapid Application Development) frameworks such as
+                Ruby on Rails, CakePHP and Django. These technologies helped advance front-end development
+                by delivering content asynchronously while maintaining performance and enabling websites to be
+                built in weeks rather than months (Shapiro, 2016:4). Additionally, in 2005, the DOJO toolkit was
+                released, allowing developers to add widgets to their websites with only a few lines of code. This
+                further underscored the advantages of creating reusable modules.
+                <br><br>
+                In 2006 the JavaScript library jQuery was revealed. This library allowed developers to write JavaScript
+                programs leveraging a simplified API for DOM interaction across a large range of web browsers. This
+                helped kick off the era of “single page apps”. Accompanying the success of jQuery came many other
+                front-end libraries, toolkits and frameworks including YUI, Prototype and Extjs - each including
+                their own stock widget libraries. The time period around 2010 saw major progress in client-side
+                development and the popularity of single page apps, which lead to client-side implementations of
+                MV*(Model View Whatever) patterns. Here, the importance of reusable and well-encapsulated UI
+                components became increasingly relevant due to code bloat in large-scale single page web apps and
+                front-end frameworks (Shapiro, 2016:9). <br><br>
+                Today these front-end libraries, toolkits and frameworks all appear to have major limitations - they
+                do not interact well together, nor can developers easily mix and match components from different
+                frameworks or libraries. Another major limitation when working with component based libraries
+                is the browser platforms themselves. If the browser vendors had successfully built capabilities to
+                encapsulate, package, and re-use code in HTML and DOM APIs before the AJAX revolution,
+                modern web development would perhaps be very different today. This is what Web Components
+                has to offer - native browser support for extending, packaging, encapsulating, and importing UI
+                components. <br><br>
+                Google has been the leading advocate for web components since the first W3C draft in May of
+                2012, which was edited by Google’s own Dimitri Glazkov and Hayato Ito. Google’s investment
+                in web components was made evident during 2013’s Google I/O where they announced Polymer,
+                their own library to build components. Since then, many resource websites such as webcomponents.
+                org and customelements.io and frameworks such as X-tag and Bosonic have appeared, enabling
+                modern implementation of web components with better browser support.
+               </p>
+
+              <h5>Has this been done before?</h5>
+
+                <p>
+                  The idea of encapsulating components certainly solves many issues with the web platform.
+                  It begs the question: why hasn’t this been done sooner? In fact, several past HTML component
+                  technologies have been proposed, but not with much success. <br><br>
+                  HTML Components (HTC for short) was proposed to the W3C by Microsoft in 1998. Microsoft felt
+                  that with the absence of reusable HTML components, the growth of web application development
+                  would be limitied (Wilson, 1998). Their proposal used a declarative model for attaching events
+                  and APIs to a host element and then parsed components would be attached to a “viewlink”, which
+                  would be comparable to today’s Shadow DOM. <br><br>
+                  Mozilla also implemented their own version of web components with XBL 1.0 (Xenogamous
+                  Binding Language) in 2001, and then followed up with a successor, XBL 2.0, in 2007. Similar to
+                  Microsofts HTML Components, XBL declaratively describes the ability to associate elements in a
+                  document with other HTML, JS and CSS (Hickson, 2012). <br><br>
+                  After Microsoft’s and Mozilla’s failed attempts at creating web components, Google is now leading
+                  the proposals. But these failed attempts did not go without notice. Both the documents from XBL
+                  1.0 and XBL 2.0 provided tremendous insight into the problem of functional encapsulation and
+                  greatly influenced the Shadow DOM specification (Glazkov and Ito, 2015a).
+                </p>
+
+                <h5>Overview</h5>
+
+                <p>
+                  Each HTML element, whether it’s a <pre><button></pre>, <pre><ul></pre> or <pre><input></pre> element, has a defined API
+                  and support built into the web browser. When you use these tags, the browser takes data supplied
+                  from your markup, renders the element, and reacts accordingly to user and script actions (Buckett,2015:2). Elements range in complexity from simple <div>s to complex elements like the date
+                  selector input element. The date selector is composed of many child elements that show and hide
+                  in response to user input. Furthermore, all styling is already applied without additional css scripts
+                  being imported and this styling does not leak to the rest of the page. The date selector shows how
+                  an element itself encapsulates the internal markup, scripts and stylesheets. With web components
+                  developers can build such elements through the use of four W3C specifications - Custom Elements,
+                  HTML Templates, Shadow DOM and HTML Imports. These combined technologies allow
+                  developers to encapsulate markup, scripts, and stylesheets into reusable packages, with native
+                  support available in the browser.
+                </p>
+
+                <h5>Possibilities</h5>
+                <p>
+                  Since web components are still in the drafting phase, changes are still to come. However, it
+                  is possible to imagine how Web Components could change the foundation of web development.
+                  As an example, imagine embedding a YouTube video using a <pre><youtube-video></pre> component or
+                  displaying a Facebook profile on a web page or blog with a <pre><facebook-profile></pre>. By designing an
+                  app in this way, it is possible to break an application down into the smallest reusable pieces of
+                  functionality and then to recombine those pieces into a modular application. You can mix your
+                  own components with those from third parties and other developers can take your components and
+                  re-use them in their applications (Buckett, 2013:6-7). Entire applications can even be built using
+                  a single component. This paradigm shift that componentization brings to web development could
+                  also open the field to non-technical people, enabling pluggable components with little or no coding
+                  knowledge required.
+                </p>
+            </div>
+            <div data-id="4" class="chapter-section">
+               <h3><a href="the-web-today">The Building Blocks</a></h3>
+
+               <p>
+                 As discussed earlier, web components are made up of four W3C specifications, Custom Elmenets, HTML Templates, Shadow DOM and HTML Imports. These specifications are the
+                building blocks of what makes up Web Components. This section will review each of the four
+                current specifications in detail to better understand how this technology is extending the web
+                platform and helping with web development. It is important to note that these specifications are
+                not yet complete and are still being modified and reviewed.
+               </p>
+            </div>
+
+          </div>
+        </section>
       </div>
 
-      <nav role="nav" class="table-of-contents">
-        <h3>
-          Table of Contents
-        </h3>
-        <ul class="table-contents">
-          <li>
-            <div class="main-chapter">
-              <a href="introduction">1. Introduction </a>
-            </div>
-          </li>
-          <li>
-            <div class="main-chapter">
-              <a href="">2. The Web Today</a>
-              <i class="fa fa-caret-down"></i>
-            </div>
-            <ul class="sub-list">
-              <li>2.1 Evolving Specifications</li>
-              <li>2.2 Modular Design</li>
-              <li>2.3 What needs fixing?</li>
-                <ul class="triple-sub-list">
-                  <li>2.3.1 Coupling and Seperation of Concerns</li>
-                  <li>2.3.2 Conflicting CSS</li>
-                  <li>2.3.3 Extensible HTML</li>
-                  <li>2.3.4 Solutions</li>
-                </ul>
-            </ul>
-          </li>
-          <li>
-            <div class="main-chapter">
-              <a href="">3. What are Web Components</a>
-              <i class="fa fa-caret-down"></i>
-            </div>
-            <ul class="sub-list">
-              <li>3.2 History</li>
-              <li>3.2 Has this been done before?</li>
-              <li>3.3 Overview</li>
-              <li>3.4 Possibilities</li>
-            </ul>
-          </li>
-          <li>
-            <div class="main-chapter">
-              <a href="">4. The Building Blocks</a>
-              <i class="fa fa-caret-down"></i>
-            </div>
-            <ul class="sub-list">
-              <li>4.1 HTML Templates</li>
-              <ul class="triple-sub-list">
-                <li>4.1.1 Advantages of HTML Templates</li>
-                <li>4.1.2 How is it inert?</li>
-                <li>4.1.3 Creating and initialization</li>
-              </ul>
-              <li>4.2 Custom Elements</li>
-              <ul class="triple-sub-list">
-                <li>4.2.1 Reistering new Elements</li>
-                <li>4.2.2 Adding Prototypes</li>
-                <li>4.2.3 Extending Elements</li>
-                <li>4.2.4 Life Cycle Callbacks</li>
-              </ul>
-              <li>4.3 Shadow DOM</li>
-              <ul class="triple-sub-list">
-                <li>4.3.1 Trees of Trees</li>
-                <li>4.3.2 Creating the Shadow DOM</li>
-                <li>4.3.3 Distribution</li>
-                <li>4.3.4 Events</li>
-                <li>4.3.5 Styling</li>
-              </ul>
-              <li>4.4 HTML Imports</li>
-              <ul class="triple-sub-list">
-                <li>4.4.1 The Basics</li>
-                <li>4.4.2 Parsing</li>
-                <li>4.4.3 Accessing Imports</li
-                >
-                <li>4.4.4 Events</li>
-                <li>4.4.5 Performance</li>
-              </ul>
-              <li>4.5 Working Together</li>
-            </ul>
-          </li>
-          <li>
-            <div class="main-chapter">
-              <a href="">5. Are We Ready For Web Components?</a>
-              <i class="fa fa-caret-down"></i>
-            </div>
-            <ul class="sub-list">
-              <li>5.1 Current Support</li>
-              <li>5.2 Issues and Future Specifications</li>
-              <ul class="triple-sub-list">
-                <li>5.2.1 Template Element</li>
-                <li>5.2.2 Custom Elements</li>
-                <li>5.2.3 Shadow DOM</li>
-                <li>5.2.4 HTML Imports</li>
-              </ul>
-              <li>5.3 Polyfilling</li>
-              <ul class="triple-sub-list">
-                <li>5.3.1 Polymer</li>
-                <li>5.3.2 X-Tag</li>
-                <li>5.3.3 Bosonic</li>
-              </ul>
-              <li>5.4 Accessibility</li>
-              <ul class="triple-sub-list">
-                <li>5.4.1 Custom Elments</li>
-                <li>5.4.2 Shadow DOM</li>
-              </ul>
-            </ul>
-          </li>
-          <li>
-            <div>
-              <a href="">6. Conclusion</a>
-            </div>
-          </li>
-          <li>
-            <div>
-              <a href="">7. Sources</a>
-            </div>
-          </li>
-
-        </ul>
-      </nav>
-      <section class="post-content">
-        <div data-id="1" class="chapter-section">
-          <h3 id="introduction">
-            Introduction
-          </h3>
-          <p>
-            The goal of this discussion is to review the new and exciting technologies being specified in
-          the web platform today, specifically Web Components. These technologies allow developers to
-          create easily maintainable user interfaces that are simple, semantic and reusable. These changes
-          however don’t yet enjoy full support from the community or browser vendors and are not yet widely
-          practiced. This raises some questions: is this really the future of web development? Has this been
-          done before? What are the problems these techniques solve? <br><br>
-          This paper plans on answering these questions by investigating the ideas behind modular design
-          and the web platform ecosystem. Each Web Components technology will be examined to better
-          understand how these technologies can solve current development problems and how they all fit
-          together. Lastly, a review of current issues and implementation will be made. By the end of this
-          paper all of these concepts and how they work together will have been explored. It is important to
-          determine where web development stands today in order to better understand where it might be
-          heading in the future. <br><br>
-          This paper will discuss ideas and technologies that are very young and not yet standardized or well
-          established. Many of the resources that will be used are still in draft, not yet complete, or not yet
-          formally published. However, the specification process of the W3C and related working groups is
-          integral to innovation on the web, which is a primary focus of this paper.
-          </p>
-        </div>
-
-        <div data-id="2" class="chapter-section">
-
-          <h3 id="the-web-today">
-            The Web Today
-          </h3>
-
-          <p>
-          Since the birth of the world wide web in the late 1980’s, major transformations in how
-          people and companies relate to each other and share information have occured. This transformation
-          can now be seen in almost any major pillar of society - mass availability of information has improved our education system and enabled a more informed public, entertainment has become democratized
-          by allowing anyone to be a publisher and the way in which we consume and do business do not
-          even resemble the structures that they had less than a quarter century ago (Jaffe, 2014a). Websites
-          have evolved from static documents into dynamic applications used across different browsers,
-          devices and operating systems. This has been enabled through a collection of open (royalty-free)
-          technologies known as the Open Web Platform, built on a core of HTML, CSS and JavaScript. <br><br>
-          Today, with the introduction of many different web-enabled devices, many products and companies
-          are moving their web-based apps to proprietery mobile platforms. This is notable when looking at
-          significant tech products and companies such as Instagram, WhatsApp and SnapChat that are either
-          native only or with web as second consideration. Native applications talk directly to the operating
-          system giving them speed and capabilites not yet possible on web apps. Today, web applications are
-          often perceived as slow, bloated and expensive in comparison with native applications. To keep up
-          with native apps, the web platform must continue to grow and add new features (Gasston, 2015).
-          </p>
-
-          <h4>Evolving Specifications</h4>
-
-          <p>
-            As the web began to grow, so did the need for global interoperability, accessibility, stability
-            and quality-control. This lead to the creation of the World Wide Web Consortium (W3C) in
-            1994 (Jaffe, 2014b). Ever since then, the W3C has been bringing together groups of diverse stakeholders
-            and public experts to write the technical specifications and guidelines for the web platform.
-            The specification process can often take months to years, followed by careful implementation by
-            browsers. These delays lead to a stagnating effect on new features in the platform. (Larson, 2015:14).
-            Lack of new features prevents the web from moving forward and thus creates major gaps in what
-            web developers can do compared to native apps. <br><br>
-            The Extensible Web Group, which was formed in 2013, has been trying to solve this problem by
-            allowing new low-level features to be implemented in browsers without waiting for the specs to
-            be finished. This is done by adding the new features with currently available JavaScript, also called
-            polyfilling (Remy, 2013). This allows developers to start using new features right away, including
-            Web Components.
-          </p>
-
-          <h4>
-            Modular Design
-          </h4>
-
-          <p>
-            It is clear that developers are constantly looking to add structure and efficiency when
-            designing web applications, which is where modular-based design comes in. Modularity is an
-            important design principle, well known in the back-end programming world for some time.
-            The ISO/IEC/IEEE define modularity as “The degree to which a system or computer program is
-            composed of discrete components
-            such that a change to one component has minimal impact on other components” (ISO/IEC/IEEE,
-            2010). The general goal of modularity is that the modules are extensible, reusable and maintainable
-            (Meyer, 2007). These principles bring many advantages not only to back-end programming but to
-            the front-end as well. <br><br>
-            Modular components can be placed into any system and work as expected without conflicting with
-            other parts. By making a web application modular, developers are ensuring that a clean foundation
-            is set for their project. In the future new developers would not need to know the details of how each
-            module works in order to use it (Berners, 2008). Often, in large projects, changes may be required.
-            The ability to add new components without breaking the existing code base is crucial in modern
-            web development (Cargnelutti, 2008).
-          </p>
-
-          <h4>
-            What needs Fixing?
-          </h4>
-
-          <p>
-            As discussed earlier the web is in a transitional state of constant growth and evolution. The
-            web platform is already being widely used as an application platform. Developers now have a huge
-            selection of libraries and frameworks available to ease application development. However, with such
-            a large selection it can be challenging to keep up to date and to know what the appropriate tool for
-            any specific job is. Not only that but these component libraries are not always interoperable and can
-            cause conflicts when mixing and matching. (Dodson, 2015) Problems can also be found in the core
-            of the web platform itself, CSS, HTML and JS. Next, the major issues of the web platform will be
-            reviewed.
-          </p>
-
-          <h5>
-            Coupling and Seperation of Concerns
-          </h5>
-
-          <p>
-            The traditional computer science idea of separation of concerns says that each section of an
-            application should only be responsible for one thing and should not contain code that deals with
-            other things. This principle is meant to break down applications into smaller units of encapsulated
-            functionality and reduce complexity (Elliot, 2014:99). JS, HTML and CSS are each layers of the
-            web platform that under the decoupling principle should be separated. However, this is not often
-            the case. The problem is that HTML, CSS and JS are by nature built to interact with each other. <br><br>
-            Large projects have trouble keeping their code modular, which often results in tight coupling
-            between their HTML, CSS and JS. By not following the principle of separation of concerns, changes
-            to one part of a project can inadvertently break unrelated parts elsewhere. This tight coupling is
-            most often caused by overly complex CSS selectors. When the CSS file defines complex selectors
-            it is often necessary for them to match the HTML structure, thus tightly coupling the styles to the
-            markup. Furthermore, JavaScript can also become coupled when needing to select elements using
-            the complex selectors. <br><br>
-            It is possible to loosen the tight coupling by connecting the HTML, JS and CSS through
-            thoughtfully named classes that express their intention and reflect their chosen purpose. However,
-            many developers feel using classes that relate to presentation is bad practice and goes againt the
-            HTML5 specification section on classes (Walton, 2013a).
-          </p>
-
-          <h5>Conflicting CSS</h5>
-
-          <p>
-            A major problem with CSS lies in the fact that every CSS selector is global. This means
-            every CSS rule that is written has the potential to affect entirely unrelated parts of the application.
-            This behavior can cause many problems, including inheritance conflicts, such as rules applied to
-            parent elements affecting child component elements or, inversely, rules from components leaking
-            and affecting other elements. Additionally, problems can arise from naming conflicts, which is
-            when the same class or ID is used by an author unknowingly, thus causing styles to be applied to the
-            wrong element. This can be made even worse if JavaScript applies unwanted behaviour to selectors
-            that have naming conflicts (Gasston, 2013:192). <br><br>
-            There are however, many techniques for avoiding these conflicts such as specific naming conventions
-            and logical structure. However these techniques do not solve the underlying global issue and
-            conflicts can still occur, especially in large applications or when multiple people are working on a
-            single project (Walton, 2013b).
-          </p>
-
-          <h5>Extensible HTML</h5>
-
-          <p>
-            HTML has come a long way since the W3C published HTML 4.0 in 1997. Originally
-            created to build static technical documents, HTML is now used to create rich web applications,
-            which is something that it was never designed to do (Berners-Lee, 1989). That said, HTML has
-            experienced a lot of progress - today HTML5 has over 100 elements available. However, even with the large range of elements available, HTML5 without Web Components has neither a way
-            for authors to define their own elements with unique APIs nor a way to extend existing elements.
-            Without the ability to natively create custom elements, the creation of rich user interfaces is more
-            difficult than it could be.
-          </p>
-
-          <h4><a href="">Solutions</a></h4>
-
-          <p>
-            Although these problems are much easier to work around using today’s modern frameworks,
-            libraries and APIs, they do not solve the underlying problems. In order for the web to progress and
-            make development of applications easier there needs to be a better, standardized solution. These
-            problems could be solved if there was a way to make modular, natively extensible, and encapsulated
-            components that are supported accross any device and system, which is where Web Components
-            come in. <br><br>
-            Web Components can be used in multiple applications and provide interoperability between
-            frameworks making them reusable and modular. In fact, the entire component’s markup can be
-            placed inside a template which follows the separation of concerns principle, thus minimizing tight
-            coupling and increasing maintainability of code. Web Components also prevent inheritance and
-            naming conflicts by seperating the component from the rest of the DOM (Document Object
-            Model), also known as encapsulation. This is enabled through the Shadow DOM which provides
-            a private scope rather than a global one. Lastly, Web Components give authors a way to natively
-            create new elements and extend HTML. (Patel, 2015:2).
-          </p>
-        </div>
-        <div data-id="3" class="chapter-section">
-           <h3><a href="the-web-today">What are Web Components</a></h3>
-
-           <p>
-             Web Components cannot be summarized as a single thing - but rather a collection of complementary technologies for encapsulating markup, script, and styles intoroduction reusable packages, with native support available in the browser (Buckett, 2015:2). Currently this technology is still
-            being specified by the W3C and is only fully supported by Chrome 26+ and Opera 15+. However,
-            the Google Chrome Team and many influential web developers including Eric Bidelman, Addy
-            Osmani and Dimitri Glazkov are the leading advocates helping to push the process along.
-            <br><br>
-            This section will discuss how and why web components came about and provide a brief overview of
-            how they work. In closing, examples of ways in which we can use this technology will be presented.
-           </p>
-
-           <h4>history</h4>
-
-           <p>
-             Originally, the term “web components” was used by Microsoft to describe their add-ons to
-            Office. Then Sun, now called Oracle, used it to describe Java servlets. Apparently you could even
-            get some kind of certification as a “web component” developer from Sun Microsystems (Shapiro,
-            D. 2015:8). The word “component” is also not a new one when it comes to CBSE (Component
-            Based Software Engineering), which is based on the approach of developing software systems by
-            selecting already available components and then assembling them using a well defined software
-            architecture (Kaur and Mann, 2010). Since the beginning of 2011 and also currently, the term
-            “Web Components” has been used to refer to the new W3C standards. <br><br>
-            The development of modern “Web Components” can be traced back to 2005, with the beginning of
-            the „AJAX“ revolution and server side RAD (Rapid Application Development) frameworks such as
-            Ruby on Rails, CakePHP and Django. These technologies helped advance front-end development
-            by delivering content asynchronously while maintaining performance and enabling websites to be
-            built in weeks rather than months (Shapiro, 2016:4). Additionally, in 2005, the DOJO toolkit was
-            released, allowing developers to add widgets to their websites with only a few lines of code. This
-            further underscored the advantages of creating reusable modules.
-            <br><br>
-            In 2006 the JavaScript library jQuery was revealed. This library allowed developers to write JavaScript
-            programs leveraging a simplified API for DOM interaction across a large range of web browsers. This
-            helped kick off the era of “single page apps”. Accompanying the success of jQuery came many other
-            front-end libraries, toolkits and frameworks including YUI, Prototype and Extjs - each including
-            their own stock widget libraries. The time period around 2010 saw major progress in client-side
-            development and the popularity of single page apps, which lead to client-side implementations of
-            MV*(Model View Whatever) patterns. Here, the importance of reusable and well-encapsulated UI
-            components became increasingly relevant due to code bloat in large-scale single page web apps and
-            front-end frameworks (Shapiro, 2016:9). <br><br>
-            Today these front-end libraries, toolkits and frameworks all appear to have major limitations - they
-            do not interact well together, nor can developers easily mix and match components from different
-            frameworks or libraries. Another major limitation when working with component based libraries
-            is the browser platforms themselves. If the browser vendors had successfully built capabilities to
-            encapsulate, package, and re-use code in HTML and DOM APIs before the AJAX revolution,
-            modern web development would perhaps be very different today. This is what Web Components
-            has to offer - native browser support for extending, packaging, encapsulating, and importing UI
-            components. <br><br>
-            Google has been the leading advocate for web components since the first W3C draft in May of
-            2012, which was edited by Google’s own Dimitri Glazkov and Hayato Ito. Google’s investment
-            in web components was made evident during 2013’s Google I/O where they announced Polymer,
-            their own library to build components. Since then, many resource websites such as webcomponents.
-            org and customelements.io and frameworks such as X-tag and Bosonic have appeared, enabling
-            modern implementation of web components with better browser support.
-           </p>
-
-          <h5>Has this been done before?</h5>
-
-            <p>
-              The idea of encapsulating components certainly solves many issues with the web platform.
-              It begs the question: why hasn’t this been done sooner? In fact, several past HTML component
-              technologies have been proposed, but not with much success. <br><br>
-              HTML Components (HTC for short) was proposed to the W3C by Microsoft in 1998. Microsoft felt
-              that with the absence of reusable HTML components, the growth of web application development
-              would be limitied (Wilson, 1998). Their proposal used a declarative model for attaching events
-              and APIs to a host element and then parsed components would be attached to a “viewlink”, which
-              would be comparable to today’s Shadow DOM. <br><br>
-              Mozilla also implemented their own version of web components with XBL 1.0 (Xenogamous
-              Binding Language) in 2001, and then followed up with a successor, XBL 2.0, in 2007. Similar to
-              Microsofts HTML Components, XBL declaratively describes the ability to associate elements in a
-              document with other HTML, JS and CSS (Hickson, 2012). <br><br>
-              After Microsoft’s and Mozilla’s failed attempts at creating web components, Google is now leading
-              the proposals. But these failed attempts did not go without notice. Both the documents from XBL
-              1.0 and XBL 2.0 provided tremendous insight into the problem of functional encapsulation and
-              greatly influenced the Shadow DOM specification (Glazkov and Ito, 2015a).
-            </p>
-
-            <h5>Overview</h5>
-
-            <p>
-              Each HTML element, whether it’s a <pre><button></pre>, <pre><ul></pre> or <pre><input></pre> element, has a defined API
-              and support built into the web browser. When you use these tags, the browser takes data supplied
-              from your markup, renders the element, and reacts accordingly to user and script actions (Buckett,2015:2). Elements range in complexity from simple <div>s to complex elements like the date
-              selector input element. The date selector is composed of many child elements that show and hide
-              in response to user input. Furthermore, all styling is already applied without additional css scripts
-              being imported and this styling does not leak to the rest of the page. The date selector shows how
-              an element itself encapsulates the internal markup, scripts and stylesheets. With web components
-              developers can build such elements through the use of four W3C specifications - Custom Elements,
-              HTML Templates, Shadow DOM and HTML Imports. These combined technologies allow
-              developers to encapsulate markup, scripts, and stylesheets into reusable packages, with native
-              support available in the browser.
-            </p>
-
-            <h5>Possibilities</h5>
-            <p>
-              Since web components are still in the drafting phase, changes are still to come. However, it
-              is possible to imagine how Web Components could change the foundation of web development.
-              As an example, imagine embedding a YouTube video using a <pre><youtube-video></pre> component or
-              displaying a Facebook profile on a web page or blog with a <pre><facebook-profile></pre>. By designing an
-              app in this way, it is possible to break an application down into the smallest reusable pieces of
-              functionality and then to recombine those pieces into a modular application. You can mix your
-              own components with those from third parties and other developers can take your components and
-              re-use them in their applications (Buckett, 2013:6-7). Entire applications can even be built using
-              a single component. This paradigm shift that componentization brings to web development could
-              also open the field to non-technical people, enabling pluggable components with little or no coding
-              knowledge required.
-            </p>
-        </div>
-        <div data-id="4" class="chapter-section">
-           <h3><a href="the-web-today">The Building Blocks</a></h3>
-
-           <p>
-             As discussed earlier, web components are made up of four W3C specifications, Custom Elmenets, HTML Templates, Shadow DOM and HTML Imports. These specifications are the
-            building blocks of what makes up Web Components. This section will review each of the four
-            current specifications in detail to better understand how this technology is extending the web
-            platform and helping with web development. It is important to note that these specifications are
-            not yet complete and are still being modified and reviewed.
-           </p>
-        </div>
-      </section>
     </article>
   </main>
 
