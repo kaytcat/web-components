@@ -125,8 +125,8 @@ article {
 
 .vert-bar {
   height: 100%;
-  width: 2px;
-  background: #00B379;
+  width: 1px;
+  background: #76E6C2;
   position: relative;
   display: block;
   left: 48%;
@@ -144,7 +144,6 @@ article {
   margin: 0 auto;
   cursor: pointer;
   box-sizing: border-box;
-  /*border: 3px solid #00B379;*/
 
   margin-bottom: 15px;
 
@@ -153,32 +152,9 @@ article {
   transition: all 0.5s ease;
   text-align: center;
 }
-/*
-.chapters:nth-child(2) {
-    top: 0;
-}
 
-.chapters:nth-child(3) {
-  top: 15px;
-}
 
-.chapters:nth-child(4) {
-  top: 30px;
-}
-
-.chapters:nth-child(5) {
-  top: 45px;
-}
-
-.chapters:nth-child(6) {
-  top: 60px;
-}
-
-.chapters:nth-child(7) {
-  top: 75px;
-}*/
-
-.chapters:nth-child(8) {
+.sticky-nav a:nth-child(8) span{
   margin-bottom: 0;
 }
 
@@ -235,8 +211,7 @@ article {
 .active {
   width: 25px;
   height: 25px;
-  opacity: 1;
-  border: 3px solid #31D09C;
+  border: 1px solid #31D09C;
   background-color: #fff;
 }
 

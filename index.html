@@ -25,14 +25,14 @@
       </header>
 
       <div class="sticky-nav">
-        <!-- <span class="vert-bar"></span> -->
-        <span data-target="1" class="chapters circle-xxl active"></span>
-        <span data-target="2" class="chapters circle-xl"></span>
-        <span data-target="3" class="chapters circle-l"></span>
-        <span data-target="4" class="chapters circle-m"></span>
-        <span data-target="5" class="chapters circle-s"></span>
-        <span data-target="6" class="chapters circle-xs"></span>
-        <span data-target="7" class="chapters circle-xxs"></span>
+        <span class="vert-bar"></span>
+        <a href="#introduction"><span data-target="1" class="chapters circle-xxl active"></span></a>
+        <a href="#the-web-today"><span data-target="2" class="chapters circle-xl"></span></a>
+        <a href="#3"><span data-target="3" class="chapters circle-l"></span></a>
+        <a href="#4"><span data-target="4" class="chapters circle-m"></span></a>
+        <a href=""><span data-target="5" class="chapters circle-s"></span></a>
+        <a href=""><span data-target="6" class="chapters circle-xs"></span></a>
+        <a href=""><span data-target="7" class="chapters circle-xxs"></span></a>
       </div>
 
       <nav role="nav" class="table-of-contents">
@@ -42,7 +42,7 @@
         <ul class="table-contents">
           <li>
             <div class="main-chapter">
-              <a href="">1. Introduction </a>
+              <a href="introduction">1. Introduction </a>
             </div>
           </li>
           <li>
@@ -155,8 +155,8 @@
       </nav>
       <section class="post-content">
         <div data-id="1" class="chapter-section">
-          <h3>
-            <a href="introduction">Introduction</a>
+          <h3 id="introduction">
+            Introduction
           </h3>
           <p>
             The goal of this discussion is to review the new and exciting technologies being specified in
@@ -181,7 +181,10 @@
 
         <div data-id="2" class="chapter-section">
 
-          <h3><a href="the-web-today">The Web Today</a></h3>
+          <h3 id="the-web-today">
+            The Web Today
+          </h3>
+
           <p>
           Since the birth of the world wide web in the late 1980’s, major transformations in how
           people and companies relate to each other and share information have occured. This transformation
@@ -499,45 +502,45 @@
 
 
 
-          var $nextItem = $navItem.next();
+          var $nextItem = $navItem.closest('a').next().find('.chapters');
           $nextItem.removeClass().addClass('chapters circle-xl');
 
-          var $previousItem = $navItem.prev('.chapters');
+          var $previousItem = $navItem.closest('a').prev().find('.chapters');
           $previousItem.removeClass().addClass('chapters circle-xl');
 
-          var $secondNextItem = $nextItem.next();
+          var $secondNextItem = $nextItem.closest('a').next().find('.chapters');
           $secondNextItem.removeClass().addClass('chapters circle-l');
 
 
-          var $secondPreviousItem = $previousItem.prev('.chapters');
+          var $secondPreviousItem = $previousItem.closest('a').prev().find('.chapters');
           $secondPreviousItem.removeClass().addClass('chapters circle-l');
 
-          var $thirdNextItem = $secondNextItem.next();
+          var $thirdNextItem = $secondNextItem.closest('a').next().find('.chapters');
           $thirdNextItem.removeClass().addClass('chapters circle-m');
 
 
-          var $thirdPreviousItem = $secondPreviousItem.prev('.chapters');
+          var $thirdPreviousItem = $secondPreviousItem.closest('a').prev().find('.chapters');
           $thirdPreviousItem.removeClass().addClass('chapters circle-m');
 
 
-          var $fourthNextItem = $thirdNextItem.next();
+          var $fourthNextItem = $thirdNextItem.closest('a').next().find('.chapters');
           $fourthNextItem.removeClass().addClass('chapters circle-s');
 
 
-          var $fourthPreviousItem = $thirdPreviousItem.prev('.chapters');
+          var $fourthPreviousItem = $thirdPreviousItem.closest('a').prev().find('.chapters');
           $fourthPreviousItem.removeClass().addClass('chapters circle-s');
 
-          var $fifthNextItem = $fourthNextItem.next();
+          var $fifthNextItem = $fourthNextItem.closest('a').next().find('.chapters');
           $fifthNextItem.removeClass().addClass('chapters circle-xs');
 
-          var $fifthPreviousItem = $fourthPreviousItem.prev('.chapters');
+          var $fifthPreviousItem = $fourthPreviousItem.closest('a').prev().find('.chapters');
           $fifthPreviousItem.removeClass().addClass('chapters circle-xs');
 
 
-          var $sixthNextItem = $fifthNextItem.next();
+          var $sixthNextItem = $fifthNextItem.closest('a').next().find('.chapters');
           $sixthNextItem.removeClass().addClass('chapters circle-xxs');
 
-          var $sixthPreviousItem = $fifthPreviousItem.prev('.chapters');
+          var $sixthPreviousItem = $fifthPreviousItem.closest('a').prev().find('.chapters');
           $sixthPreviousItem.removeClass().addClass('chapters circle-xxs');
 
 
