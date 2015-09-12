@@ -43,7 +43,15 @@ h5 {
 h1 {
   font-size: 60px;
   margin: 0;
+}
 
+a {
+  color: #00B379;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 h2 {
@@ -152,6 +160,10 @@ pre, code{
     background: #E1FFF5;
     border-radius: 3px;
     margin: 0 5px;
+}
+
+sup a {
+  color: #00B379;
 }
 
 .vert-bar {
