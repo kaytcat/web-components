@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +26,7 @@
               Web Components
             </h1>
             <div class="post-data">
-              28 August, 2015 - <a href="">Kaitlin Rathwell</a> - <a href="">Sources</a>
+              28 August, 2015 - <a href="https://github.com/kaytcat">Kaitlin Rathwell</a> <a class="github-button" href="https://github.com/kaytcat/web-components/tree/gh-pages" data-count-href="/kaytcat/web-components/stargazers" data-count-api="/repos/kaytcat/web-components#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
             </div>
             <h2>
               A discussion surrounding Web Components and their role in the future of web development.
@@ -431,12 +432,12 @@
                   greatly influenced the Shadow DOM specification (Glazkov and Ito, 2015a).
                 </p>
 
-                <h5>Overview</h5>
+                <h5 id="overview">Overview</h5>
 
                 <p>
-                  Each HTML element, whether it’s a <pre><button></pre>, <pre><ul></pre> or <pre><input></pre> element, has a defined API
+                  Each HTML element, whether it’s a<code>&lt;button&gt;</code>,<code>&lt;ul&gt;</code>or<code>&lt;input&gt;</code> element, has a defined API
                   and support built into the web browser. When you use these tags, the browser takes data supplied
-                  from your markup, renders the element, and reacts accordingly to user and script actions (Buckett,2015:2). Elements range in complexity from simple <div>s to complex elements like the date
+                  from your markup, renders the element, and reacts accordingly to user and script actions (Buckett,2015:2). Elements range in complexity from simple <code>&lt;div&gt;</code>'s to complex elements like the date
                   selector input element. The date selector is composed of many child elements that show and hide
                   in response to user input. Furthermore, all styling is already applied without additional css scripts
                   being imported and this styling does not leak to the rest of the page. The date selector shows how
@@ -447,12 +448,12 @@
                   support available in the browser.
                 </p>
 
-                <h5>Possibilities</h5>
+                <h5 id="possibilities">Possibilities</h5>
                 <p>
                   Since web components are still in the drafting phase, changes are still to come. However, it
                   is possible to imagine how Web Components could change the foundation of web development.
-                  As an example, imagine embedding a YouTube video using a <pre><youtube-video></pre> component or
-                  displaying a Facebook profile on a web page or blog with a <pre><facebook-profile></pre>. By designing an
+                  As an example, imagine embedding a YouTube video using a <code>&lt;youtube-video&gt;</code> component or
+                  displaying a Facebook profile on a web page or blog with a <code>&lt;facebook-profile&gt;</code>. By designing an
                   app in this way, it is possible to break an application down into the smallest reusable pieces of
                   functionality and then to recombine those pieces into a modular application. You can mix your
                   own components with those from third parties and other developers can take your components and
@@ -463,7 +464,7 @@
                 </p>
             </div>
             <div data-id="4" class="chapter-section">
-               <h3><a href="the-web-today">The Building Blocks</a></h3>
+               <h3 class="the-building-blocks">The Building Blocks</h3>
 
                <p>
                  As discussed earlier, web components are made up of four W3C specifications, Custom Elmenets, HTML Templates, Shadow DOM and HTML Imports. These specifications are the
@@ -474,11 +475,36 @@
                </p>
             </div>
 
-          </div>
-        </section>
-      </div>
 
-    </article>
+        </section>
+      </article>
+
+
+
+      <section class="sources">
+        <h3 id="sources">Sources</h3>
+        <ul>
+          <li>dsadas</li>
+        </ul>
+      </section>
+
+        <section class="comments">
+        <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES * * */
+              var disqus_shortname = 'kaytcat-web-components';
+
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </section>
+
+    </div>
   </main>
 
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -578,17 +604,22 @@
   });
 
 
-  // nav.find('a').on('click', function () {
-  //   var $el = $(this)
-  //     , id = $el.attr('href');
 
-  //   $('html, body').animate({
-  //     scrollTop: $(id).offset().top - nav_height
-  //   }, 500);
-
-  //   return false;
-  // });
-
+  $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
   </script>
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>

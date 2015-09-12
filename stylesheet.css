@@ -67,6 +67,19 @@ h2 {
   margin-bottom: 0;
 }
 
+.post-data a {
+  text-decoration: none;
+}
+
+.post-data a:hover {
+  text-decoration: underline;
+}
+
+.post-data iframe {
+  vertical-align: -4px;
+  margin-left: 10px;
+}
+
 
 .post-data,
 .post-data a {
@@ -126,7 +139,20 @@ header {
   text-indent: 50px;
 }
 
-
+pre, code{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 0 1.75em 0;
+    border: #A8EAD4 1px solid;
+    padding: 3px 5px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.9em;
+    white-space: pre;
+    overflow: auto;
+    background: #E1FFF5;
+    border-radius: 3px;
+    margin: 0 5px;
+}
 
 .vert-bar {
   height: 100%;
@@ -251,6 +277,11 @@ header {
   height: 25px;
   border: 1px solid #31D09C;
   background-color: #fff;
+}
+
+.sources {
+  margin-top: 50px;
+  border-top: 1px solid #e3e3e3;
 }
 
 
