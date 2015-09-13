@@ -40,6 +40,10 @@ h5 {
   font-weight: bold;
 }
 
+.mobile-show {
+  display: none;
+}
+
 h1 {
   font-size: 60px;
   margin: 0;
@@ -181,6 +185,11 @@ pre {
   padding: 20px;
   border-color: #DCDCDC;
   background-color: #FFFFFF;
+  white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;
 }
 
 .accent {
@@ -385,6 +394,10 @@ sup a {
     margin-right: auto;
     margin-left: 60px;
   }
+
+  .half-image {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -419,17 +432,43 @@ sup a {
     .post-content h5 {
       font-size: 16px;
     }
-}
 
-@media screen and (max-width: 340px) {
-    .container {
-      width: 90%;
-      margin-left: auto;
+    pre {
+      font-size: 13px;
+    }
+
+    .half-image {
+      width: 100%;
     }
 
     .nav-container {
       display: none;
     }
+
+    .container {
+      width: 90%;
+      margin-left: auto;
+    }
+
+    .mobile-show {
+      display: inline;
+    }
+
+    .post-data {
+      line-height: 30px;
+    }
+
+    .post-data iframe {
+      margin-left: 0;
+      vertical-align: -7px;
+    }
+
+    .mobile-hide {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 340px) {
 
     h1 {
       font-size: 32px;
