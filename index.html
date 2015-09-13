@@ -689,13 +689,15 @@ var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="
                 created prototype object.
 
 <pre>
-
+<b>document</b>.<span class="accent2">registerElement</span>.('foo', {<span class="accent3">prototype</span>: <span class="accent">newCustomPrototype</span>});
 </pre>
 
                 If the element has not yet been instantiated declaratively it can then be added to the dom imperatively
                 either with document.createElement() or with the new operator <sup><a href="#source25">[25]</a></sup>.
 
-                img
+<pre>
+var <span class="accent">superInput</span> = <b>document</b>.<span class="accent2">createElement</span>('input', 'super-input');
+</pre>
               </p>
 
               <h5>Extending Elements</h5>
@@ -707,7 +709,12 @@ var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="
                 use of the ‘extends’ option specifies that the element is being registered as a type extenstion custom
                 element instead of the standard custom element <sup><a href="#source21">[21]</a></sup>.
 
-                img
+<pre>
+var <span class="accent">superInput</span> = <b>document</b>.<span class="accent2">registerElement</span>('super-input', {
+  prototype: <b>Object</b>.<span class="accent3">create</span>(HTMLButtonElement.<span class="accent4">prototype</span>),
+  extends: 'input'
+});
+</pre>
 
                 The above code illustrates how the custom element <code>&lt;super-input&gt;</code> extends the native <code>&lt;input&gt;</code>
                 element. As instantiated it would inherit the input element’s name, role, states, properties and builtin
@@ -715,7 +722,9 @@ var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="
                 rather extends an existing element of the specified type under the existing tag name (in the example
                 above, ‘input’). An extended element can be instantiated declaratively using the ‘is’ attribute.
 
-                img
+<pre>
+&lt;input <span class="accent">is</span>=&quot;super-input&quot;&gt;
+</pre>
 
                 Another way to instantiate an extended element is imperatively in JavaScript using the createElement()
                 method and setting the second parameter as the extended elements name <sup><a href="#source24">[24]</a></sup>.
@@ -743,7 +752,7 @@ var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="
                     detachedCallback() - invoked when an element is removed from the DOM
                   </li>
                   <li>
-                    attributeChangedCallback(<name>,<oldVal>, <newVal>) - invoked whenever an element’s
+                    attributeChangedCallback(&lt;name&gt;,&lt;oldVal&gt;, &lt;newVal&gt;) - invoked whenever an element’s
 attribute is added, changed or removed.
                   </li>
                 </ul>
@@ -751,7 +760,13 @@ attribute is added, changed or removed.
                 To use the callbacks, define the functions as properties of a prototype object. The following code
                 illustrates callback implementation <sup><a href="#source25">[25]</a></sup>.
 
-                img
+<pre>
+var <span class="accent">newCustomePrototype</span> = <b>Object</b>.<span class="accent2">create</span>(HTMLElement.<span class="accent3">prototype</span>);
+
+<span class="accent">NewCustomPrototype</span>.<span class="accent4">cretedCallback</span> = function() {...};
+
+<span class="accent">NewCustomPrototype</span>.<span class="accent4">attachedCallback</span> = function() {...};
+</pre>
               </p>
 
               <h4 id="Shadow DOM">Shadow DOM</h4>
@@ -773,9 +788,9 @@ attribute is added, changed or removed.
                 is a document. This tree is visible to the end user. The Shadow tree represents the internal DOM
                 subtree which is scoped and not visible to the end user. The Composed tree is what the browser
                 actually renders <sup><a href="#source13">[13]</a></sup>. For rendering, the document tree is distributed into the shadow
-                DOM to produce the composed DOM (Polymer-Project.org, a).
+                DOM to produce the composed DOM <sup><a href="#source38">[38]</a></sup>.
 
-                img
+                <img class="full-image" src="images/shadow-dom.png" height="547" width="1023" alt="shadow DOM subtrees" title="shadow Dom subtrees">
 
                 Any node in the document tree can “host” one or more shadow trees. These host nodes are then
                 referred to as shadow hosts. The associated shadow tree hosted by this node contains a root node
@@ -794,13 +809,22 @@ attribute is added, changed or removed.
                 JavaScript or even a custom element. The Element.createShadowRoot(&lt;hostElement&gt;) is used to
                 create the scoped shadow root and the shadow DOM subtree attached to the host element.
 
-                img
+<pre>
+&lt;button&gt;Hello!&lt;/button&gt;
+
+&lt;script&gt;
+  var host = <b>document</b>.querySelector('button');
+  var root = <span class="accent">host</span>.<span class="accent2">createShadowRoot</span>();
+&lt;/script&gt;
+</pre>
 
                 The above example adds a shadow DOM to a <code>&lt;button&gt;</code> element containing the text content
                 “Hello!”. Using JavaScript, content can be added to and removed from the shadow root as show
                 below.
 
-                img
+<pre>
+<span class="accent">root</span>.textContent = 'Now say Goodbye!';
+</pre>
 
                 The Composed tree then takes the shadow root and Document tree and builds up the new document.
                 The content of the shadow root is then rendered and visible to the user. If JavaScript attempts to
@@ -808,7 +832,7 @@ attribute is added, changed or removed.
                 will not be found. Only the original <code>&lt;button&gt;</code> element and “Hello!” will be returned as shown in
                 the following example.
 
-                img
+                <img class="half-image" src="images/shadowelement.png"  alt="Shadow DOM element preview" title="Example of a Shadow DOM element in a browser">
 
                 This is why when an input tag is inspected the user only sees the <code>&lt;input&gt;</code> tag and nothing else. That
                 is because the actual inner contents are encapsulated and hidden in that element’s shadowroot.
@@ -882,7 +906,11 @@ attribute is added, changed or removed.
               similar to how stylesheets are included except for the ref attribute, which is set to the new “import”
               keyword.
 
-              img
+<pre>
+&lt;head&gt;
+  &lt;link rel=&quot;<span class="accent">import</span>&quot; href=&quot;path/to/importstuff.html&quot;&gt;
+&lt;/head&gt;
+</pre>
 
               A document that links to an import is called an ‘import referrer’ and the document that is being
               imported is simply called the ‘imported document’ <sup><a href="#source31">[31]</a></sup>. The URL of the
@@ -912,7 +940,11 @@ attribute is added, changed or removed.
                 into the main document using JavaScript. This is done through the use of the link elements .import
                 property which references the import documents contents.
 
-                img
+<pre>
+var <span class="accent">link</span> = <b>document</b>.querySelector('link[rel="import"]');
+
+var content = <span class="accent">link</span>.<span class="accent2">import</span>;
+</pre>
 
                 In the example above, the link element is selected and the contents of the imported document are
                 assigned to the htmlDoc variable as a DOM tree. Nodes can be selected, cloned and appended from
@@ -984,7 +1016,7 @@ attribute is added, changed or removed.
               <p>
                 The following chart shows current brower support for each technology.
 
-                img
+                <img class="full-image" src="images/supporttable.jpg" alt="Browser support chart" title="Table showing Web Component browser support">
 
 
                 Currently, Internet Explorer does not support any of the Web Components technologies. Microsoft
