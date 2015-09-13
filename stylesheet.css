@@ -162,6 +162,33 @@ pre, code{
     margin: 0 5px;
 }
 
+pre {
+  margin: 30px 0;
+  padding: 20px;
+  border-color: #DCDCDC;
+  background-color: #FFFFFF;
+}
+
+.accent {
+  color: #00B379;
+}
+
+.accent2 {
+  color: #EC3F3F;
+}
+
+.accent3 {
+  color: #A585D8;
+}
+
+.accent4 {
+  color: #DCB805;;
+}
+
+.comment {
+  color: #AFAFAF;
+}
+
 sup a {
   color: #00B379;
 }
@@ -292,9 +319,16 @@ sup a {
 }
 
 .sources {
-  margin-top: 50px;
+  margin: 50px 0;
+  padding: 20px 0;
   border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
 }
+
+.sources a{
+  font-size: 14px;
+}
+
 
 
 @media screen and (max-width: 1200px) {
