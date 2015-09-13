@@ -269,7 +269,7 @@
                 selection of libraries and frameworks available to ease application development. However, with such
                 a large selection it can be challenging to keep up to date and to know what the appropriate tool for
                 any specific job is. Not only that but these component libraries are not always interoperable and can
-                cause conflicts when mixing and matching. (Dodson, 2015) Problems can also be found in the core
+                cause conflicts when mixing and matching <sup><a href="#source8">[8]</a></sup>. Problems can also be found in the core
                 of the web platform itself, CSS, HTML and JS. Next, the major issues of the web platform will be
                 reviewed.
               </p>
@@ -282,7 +282,7 @@
                 The traditional computer science idea of separation of concerns says that each section of an
                 application should only be responsible for one thing and should not contain code that deals with
                 other things. This principle is meant to break down applications into smaller units of encapsulated
-                functionality and reduce complexity (Elliot, 2014:99). JS, HTML and CSS are each layers of the
+                functionality and reduce complexity <sup><a href="#source9">[9]</a></sup>. JS, HTML and CSS are each layers of the
                 web platform that under the decoupling principle should be separated. However, this is not often
                 the case. The problem is that HTML, CSS and JS are by nature built to interact with each other. <br><br>
                 Large projects have trouble keeping their code modular, which often results in tight coupling
@@ -295,7 +295,7 @@
                 It is possible to loosen the tight coupling by connecting the HTML, JS and CSS through
                 thoughtfully named classes that express their intention and reflect their chosen purpose. However,
                 many developers feel using classes that relate to presentation is bad practice and goes againt the
-                HTML5 specification section on classes (Walton, 2013a).
+                HTML5 specification section on classes <sup><a href="#source10">[10]</a></sup>.
               </p>
 
               <h5 id="conflicting-css">
@@ -310,11 +310,11 @@
                 and affecting other elements. Additionally, problems can arise from naming conflicts, which is
                 when the same class or ID is used by an author unknowingly, thus causing styles to be applied to the
                 wrong element. This can be made even worse if JavaScript applies unwanted behaviour to selectors
-                that have naming conflicts (Gasston, 2013:192). <br><br>
+                that have naming conflicts <sup><a href="#source11">[11]</a></sup>. <br><br>
                 There are however, many techniques for avoiding these conflicts such as specific naming conventions
                 and logical structure. However these techniques do not solve the underlying global issue and
                 conflicts can still occur, especially in large applications or when multiple people are working on a
-                single project (Walton, 2013b).
+                single project <sup><a href="#source12">[12]</a></sup>.
               </p>
 
               <h5 id="extensible-html">
@@ -324,7 +324,7 @@
               <p>
                 HTML has come a long way since the W3C published HTML 4.0 in 1997. Originally
                 created to build static technical documents, HTML is now used to create rich web applications,
-                which is something that it was never designed to do (Berners-Lee, 1989). That said, HTML has
+                which is something that it was never designed to do. That said, HTML has
                 experienced a lot of progress - today HTML5 has over 100 elements available. However, even with the large range of elements available, HTML5 without Web Components has neither a way
                 for authors to define their own elements with unique APIs nor a way to extend existing elements.
                 Without the ability to natively create custom elements, the creation of rich user interfaces is more
@@ -349,14 +349,14 @@
                 naming conflicts by seperating the component from the rest of the DOM (Document Object
                 Model), also known as encapsulation. This is enabled through the Shadow DOM which provides
                 a private scope rather than a global one. Lastly, Web Components give authors a way to natively
-                create new elements and extend HTML. (Patel, 2015:2).
+                create new elements and extend HTML <sup><a href="#source13">[13]</a></sup>.
               </p>
             </div>
             <div data-id="3" class="chapter-section">
                <h3 id="what-are-web-components">What are Web Components</h3>
 
                <p>
-                 Web Components cannot be summarized as a single thing - but rather a collection of complementary technologies for encapsulating markup, script, and styles intoroduction reusable packages, with native support available in the browser (Buckett, 2015:2). Currently this technology is still
+                 Web Components cannot be summarized as a single thing - but rather a collection of complementary technologies for encapsulating markup, script, and styles intoroduction reusable packages, with native support available in the browser <sup><a href="#source14">[14]</a></sup>. Currently this technology is still
                 being specified by the W3C and is only fully supported by Chrome 26+ and Opera 15+. However,
                 the Google Chrome Team and many influential web developers including Eric Bidelman, Addy
                 Osmani and Dimitri Glazkov are the leading advocates helping to push the process along.
@@ -365,22 +365,21 @@
                 how they work. In closing, examples of ways in which we can use this technology will be presented.
                </p>
 
-               <h4 id="history">history</h4>
+               <h4 id="history">History</h4>
 
                <p>
                  Originally, the term “web components” was used by Microsoft to describe their add-ons to
                 Office. Then Sun, now called Oracle, used it to describe Java servlets. Apparently you could even
-                get some kind of certification as a “web component” developer from Sun Microsystems (Shapiro,
-                D. 2015:8). The word “component” is also not a new one when it comes to CBSE (Component
+                get some kind of certification as a “web component” developer from Sun Microsystems <sup><a href="#source15">[15]</a></sup>. The word “component” is also not a new one when it comes to CBSE (Component
                 Based Software Engineering), which is based on the approach of developing software systems by
                 selecting already available components and then assembling them using a well defined software
-                architecture (Kaur and Mann, 2010). Since the beginning of 2011 and also currently, the term
+                architecture. Since the beginning of 2011 and also currently, the term
                 “Web Components” has been used to refer to the new W3C standards. <br><br>
                 The development of modern “Web Components” can be traced back to 2005, with the beginning of
                 the „AJAX“ revolution and server side RAD (Rapid Application Development) frameworks such as
                 Ruby on Rails, CakePHP and Django. These technologies helped advance front-end development
                 by delivering content asynchronously while maintaining performance and enabling websites to be
-                built in weeks rather than months (Shapiro, 2016:4). Additionally, in 2005, the DOJO toolkit was
+                built in weeks rather than months <sup><a href="#source15">[15]</a></sup>. Additionally, in 2005, the DOJO toolkit was
                 released, allowing developers to add widgets to their websites with only a few lines of code. This
                 further underscored the advantages of creating reusable modules.
                 <br><br>
@@ -392,7 +391,7 @@
                 development and the popularity of single page apps, which lead to client-side implementations of
                 MV*(Model View Whatever) patterns. Here, the importance of reusable and well-encapsulated UI
                 components became increasingly relevant due to code bloat in large-scale single page web apps and
-                front-end frameworks (Shapiro, 2016:9). <br><br>
+                front-end frameworks <sup><a href="#source15">[15]</a></sup>. <br><br>
                 Today these front-end libraries, toolkits and frameworks all appear to have major limitations - they
                 do not interact well together, nor can developers easily mix and match components from different
                 frameworks or libraries. Another major limitation when working with component based libraries
@@ -417,17 +416,17 @@
                   technologies have been proposed, but not with much success. <br><br>
                   HTML Components (HTC for short) was proposed to the W3C by Microsoft in 1998. Microsoft felt
                   that with the absence of reusable HTML components, the growth of web application development
-                  would be limitied (Wilson, 1998). Their proposal used a declarative model for attaching events
+                  would be limitied <sup><a href="#source16">[16]</a></sup>. Their proposal used a declarative model for attaching events
                   and APIs to a host element and then parsed components would be attached to a “viewlink”, which
                   would be comparable to today’s Shadow DOM. <br><br>
                   Mozilla also implemented their own version of web components with XBL 1.0 (Xenogamous
                   Binding Language) in 2001, and then followed up with a successor, XBL 2.0, in 2007. Similar to
                   Microsofts HTML Components, XBL declaratively describes the ability to associate elements in a
-                  document with other HTML, JS and CSS (Hickson, 2012). <br><br>
+                  document with other HTML, JS and CSS <sup><a href="#source17">[17]</a></sup>. <br><br>
                   After Microsoft’s and Mozilla’s failed attempts at creating web components, Google is now leading
                   the proposals. But these failed attempts did not go without notice. Both the documents from XBL
                   1.0 and XBL 2.0 provided tremendous insight into the problem of functional encapsulation and
-                  greatly influenced the Shadow DOM specification (Glazkov and Ito, 2015a).
+                  greatly influenced the Shadow DOM specification <sup><a href="#source18">[18]</a></sup>.
                 </p>
 
                 <h5 id="overview">Overview</h5>
@@ -435,7 +434,7 @@
                 <p>
                   Each HTML element, whether it’s a<code>&lt;button&gt;</code>,<code>&lt;ul&gt;</code>or<code>&lt;input&gt;</code> element, has a defined API
                   and support built into the web browser. When you use these tags, the browser takes data supplied
-                  from your markup, renders the element, and reacts accordingly to user and script actions (Buckett,2015:2). Elements range in complexity from simple <code>&lt;div&gt;</code>'s to complex elements like the date
+                  from your markup, renders the element, and reacts accordingly to user and script actions <sup><a href="#source14">[14]</a></sup>. Elements range in complexity from simple <code>&lt;div&gt;</code>'s to complex elements like the date
                   selector input element. The date selector is composed of many child elements that show and hide
                   in response to user input. Furthermore, all styling is already applied without additional css scripts
                   being imported and this styling does not leak to the rest of the page. The date selector shows how
@@ -455,22 +454,472 @@
                   app in this way, it is possible to break an application down into the smallest reusable pieces of
                   functionality and then to recombine those pieces into a modular application. You can mix your
                   own components with those from third parties and other developers can take your components and
-                  re-use them in their applications (Buckett, 2013:6-7). Entire applications can even be built using
+                  re-use them in their applications <sup><a href="#source14">[14]</a></sup>. Entire applications can even be built using
                   a single component. This paradigm shift that componentization brings to web development could
                   also open the field to non-technical people, enabling pluggable components with little or no coding
                   knowledge required.
                 </p>
             </div>
-            <div data-id="4" class="chapter-section">
-               <h3 class="the-building-blocks">The Building Blocks</h3>
 
-               <p>
-                 As discussed earlier, web components are made up of four W3C specifications, Custom Elmenets, HTML Templates, Shadow DOM and HTML Imports. These specifications are the
+            <div data-id="4" class="chapter-section">
+              <h3 id="the-building-blocks">The Building Blocks</h3>
+
+              <p>
+                As discussed earlier, web components are made up of four W3C specifications, Custom Elmenets, HTML Templates, Shadow DOM and HTML Imports. These specifications are the
                 building blocks of what makes up Web Components. This section will review each of the four
                 current specifications in detail to better understand how this technology is extending the web
                 platform and helping with web development. It is important to note that these specifications are
                 not yet complete and are still being modified and reviewed.
-               </p>
+              </p>
+
+              <h4 id="html-templates">HTML Templates</h4>
+
+              <p>
+                The College English Dictionary defines Templates as a document or file having a preset
+                format, used as a starting point for a particular application so that the format does not have to be
+                recreated each time it is used. This definition follows the modular design approach and is becoming
+                an important part of modern front-end web development. However, the term “Template” is not
+                new when it comes to backend development. Templating first became popular with server-side
+                templating engines such as Smarty(PHP), Django Templates(Python) and ERB/Haml(Ruby) <sup><a href="#source19">[19]</a></sup>. The main role of these engines is to seperate business logic from the presentation
+                of data. This allows developers to remove complex and ugly code from the HTML. <br><br>
+                Today, client-side templating libraries such Handlebars, Dust and Nunjucks use similar techniques
+                and are becoming very popular. However, Web Components’ template tags allow the development of
+                native templates that are standardized and often more efficient in browsers than current templating
+                methods <sup><a href="#source13">[13]</a></sup>.
+              </p>
+
+              <h5 id="advantages-of-html-templates">Advantages of HTML Templates</h5>
+
+              <p>
+                The current front-end templating methods are effective, however they also come with a
+                range of problems. One method known as overloading scripts employs template content rendered as
+                a string in a script tag with an unsupported type attribute (such as “text/x-template”). The unknown
+                type attribute causes the contents to be ignored by the browser’s renderer and parser. However, this method encourages the use of .innerHTML and can open up XSS vulnerabilities. In a second
+                method, template content is hidden using CSS styling such as display: none. However, the content
+                being hidden does not mean that resources such as images and scripts are ignored - many browsers
+                will prefetch these resources. Additionally, these methods can be painful to style and can often lead
+                to CSS naming conflicts <sup><a href="#source19">[19]</a></sup>. <br><br>
+                HTML Templates are completely inert, which means assets are not processed and the template
+                markup is not rendered until it is needed. This allows developers to reduce initial requests on
+                page load, because they can freely add multiple templates while avoiding parsing unused markup.
+                Additionally the templates contents are not considered part of the DOM (Document Object
+                Model). This means when JavaScript traverses the DOM, none of the templates child nodes are
+                included. This helps to speed up node lookups and ensures that the template content remains
+                hidden to browsers until it is needed <sup><a href="#source14">[14]</a></sup>.
+              </p>
+
+              <h5 class="how-is-it-inert">How is it inert?</h5>
+
+              <p>
+                The template element <code>&lt;template&gt;</code> is used to hold fragments of HTML that are not rendered
+                on page load but may be subsequently instantiated during runtime using JavaScript. This element is
+                a HTMLTemplateElement interface - the template interface that extends the HTMLElement class.
+                Like all W3C interface objects it contains an IDL (Interface Definition Language) that is used to
+                describe its states and behaviours to the browser <sup><a href="#source13">[13]</a></sup>
+
+                img
+
+                The previous code is the IDL for the template element. It describes the element as having one
+                read-only attribute called “content” which returns a DocumentFragment. The DocumentFragment
+                object is asscociated with a different Document object than the rest of the website. This prevents the
+                template contents from interfering with the main Document while still allowing the actual element
+                node to be selectable <sup><a href="#source20">[20]</a></sup>. This inertness of the template content improves
+                web application performance.
+              </p>
+
+              <h5>Creating and initialization</h5>
+
+              <p>
+                A template is created using the opening <code>&lt;template&gt;</code> and closing <code>&lt;/template&gt;</code> tags. The
+                element can be placed anywhere in the <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code> or <code>&lt;frameset&gt;</code> including subsequent
+                children elements <sup><a href="#source21">[21]</a></sup>.
+
+                img
+
+                The first step to activate the template is by selecting the template element followed by either
+                cloning or importing the templates content into a new document using script. This is done using
+                the .content attribute associated with the element <sup><a href="#source20">[20]</a></sup>. To following code
+                illustrates the process of selecting an elment and retrieving the content.
+
+                img
+
+                Once selected the content must then be cloned or imported. The first method - cloning - uses the
+                cloneNode() method shown in the following example.
+
+                img
+
+                The Boolean parameter represents the cloning type - true for deep cloning, which targets the node
+                and all of its children nodes, and false for shallow cloning, which only targets the parent node and
+                no children. The second approach uses the importNode() method which has a slightly different
+                syntax.
+
+                img
+
+                It takes two input parameters - the first being the templates content node and the second is the
+                boolean flag representing the cloning type, again with the same boolean option as in cloneNode().
+                Either method can be used - they will result in the same outcome. The only difference between the
+                two is how the templates content is actually cloned. With cloneNode() it is first cloned in the template
+                document and then moved into the new document when it’s appended. With importNode(), it is
+                cloned and moved at the same time when it is appended. <sup><a href="#source20">[20]</a></sup>.
+              </p>
+
+              <h4 id="custom-elements">Custom Elements</h4>
+
+              <p>
+                Complex web applications are often coupled with complex and often messy HTML. As
+                mentioned earlier, this is because HTML was originally created for simple technical documents
+                and not the complex websites we see today. Custom Elements enable developers to create their own
+                custom HTML tags and extend existing tags to ensure more semantic and readable markup as well as
+                providing easier component reuse (Kitamura, 2014). Even though we can currently create our own
+                custom tags such as <foo>, we do not have any of the functionality that the new Custom Elements
+                allows. Custom elements provide a common way to encapsulate functionality in a self-describing manner that is stored in a reusable tag that include definable lifecycle methods.
+              </p>
+
+              <h5 id="registering-new-elements">Registering New Elements</h5>
+
+              <p>
+                The initial creation of a custom tags can be done declaratively using HTML such as
+                <code>&lt;custom-tag&gt;&lt;/custom-tag&gt;</code> or imperatively through script. The element can then be registered
+                with the browser. This is done using the document.registerElement which takes two arguments.
+                The first argument is the element name and the second is an optional argument which allows you
+                to define the prototype object from which the element inherits. If no second argument is given the
+                custom element by default has a HTMLElement.prototype object. (Overson and Strimpel, 2015:
+                Ch.12)
+
+                img
+
+              Every document has a registry which contains a set of element definitions. When an element is
+              registered it’s definition is then stored in this registry. Effectively, whenever a new DOM element
+              is created, whether imperatively or declaratively, the browser will scan the registry for a matching
+              element definition. If one is found, the browser creates a new instance of the custom element
+              (Glazkov, 2015). However, if the element definition is not yet registered, the custom element
+              instance is called an unresolved element. This unresolved element can be then upgraded to a custom
+              element if registered later (Manning, 2015:19). <br><br>
+              It is imperative that custom elements contain proper naming conventions. Each element name must
+              contain at least one hyphen-minus symbol and cannot contain underscores (Kitamura, 2014). This
+              distinguishes them from non custom elements and built-in HTML elements. The browser will treat
+              elements with hyphened names as a valid custom elements that have HTMLElement interfaces
+              rather than HTMLUnknownElement such as unknown tags without hyphens.(Manning, 2015:19) (Glazkov, 2014a). This is also to prevent naming collisions from occuring as new elements are added
+to the HTML specification. (Overson and Strimpel, 2015: Ch.12). If an element is attempted to be
+registered with an incorrect name an error will result.
+              </p>
+
+              <h5>Adding Prototypes</h5>
+
+              <p>
+                Registration alone doesn’t make custom elements very special. As instantiated, a custom tag
+                conveys a similar amount of semantics as a HTML div or span element. In order to actually add
+                custom behavior to a custom element, properties and methods must be defined for that element
+                through a JavaScript API. (Glazkov, 2014) This can be done by first creating a new JavaScript
+                object using the Object.Create() method. This method accepts two parameters, the first is the target
+                prototype of the newly created object and the second is optional parameter is a propertyObject and
+                is used to define new properties and methods. When creating standard, non-extended elements the
+                default HTMLElement.prototype is used as the first parameter as shown below.
+
+                img
+
+                The preceding code has created a new object with the HTMLElement.prototype and has assigned
+                this to the newCustomPrototype variable. However, developers can also utilize the optional
+                propertyObject parameter and immediately define some methods and properties as follows:
+
+                img
+
+                This method of constructing the prototype makes use of JavaScript’s get/set syntax (Bidelman,
+                2013b). If the propertyObject parameter is not used then methods and properties must be added
+                to the object variable dynamically as seen below.
+
+                img
+
+                The preceding code used the defineProperty method to add properties to the newCustomPrototype
+                object. This method contains three parameters - the first parameter should be your prototype object,
+                the second is the name of the property and the third should be an object describing the behaviour
+                of that property. This is where you can set a default value as well as specify whether the property is
+                writable or read-only (Patel, 2015:29-30).
+                Once the API for the custom element is defined in the prototype object it can added to the
+                document.registerElement() method upon registration. As mentioned earlier, the second parameter
+                of document.registerElement() contains a property called prototype which can be set to the newly
+                created prototype object.
+
+                img
+
+                If the element has not yet been instantiated declaratively it can then be added to the dom imperatively
+                either with document.createElement() or with the new operator (Bidelman, 2013b).
+
+                img
+              </p>
+
+              <h5>Extending Elements</h5>
+
+              <p>
+                The registerElement() method shown earlier can also be used to extend the functionality
+                of custom and native HTML elements. To extend an element, an ‘extends’ key should be added
+                to the registerElement() second parameter with the name of the element it wishes to extend. The
+                use of the ‘extends’ option specifies that the element is being registered as a type extenstion custom
+                element instead of the standard custom element (Overson and Strimpel, 2015: Ch.12).
+
+                img
+
+                The above code illustrates how the custom element <super-input> extends the native <input>
+                element. As instantiated it would inherit the input element’s name, role, states, properties and builtin
+                focus and keyboard interaction behaviours. This means that it does not introduce a new tag, but
+                rather extends an existing element of the specified type under the existing tag name (in the example
+                above, ‘input’). An extended element can be instantiated declaratively using the ‘is’ attribute.
+
+                img
+
+                Another way to instantiate an extended element is imperatively in JavaScript using the createElement()
+                method and setting the second parameter as the extended elements name. (Glazkov, 2014b).
+              </p>
+
+              <h5>Life Cycle Callbacks</h5>
+
+              <p>
+                One feature that many JavaScript components lack is a clearly defined life cycle. Often the
+                instance of the component must be stored in a variable so that functions can be called on it later. However, with Custom Elements, the actual element in the DOM is the instance. The functions
+                are available right on the element (Bateman, 2014). This is possible because the element’s prototype
+                object goes through different states during its lifecycle. Various callback functions can be defined
+                to be invoked during these different states. These callbacks are stored internally as a collection of
+                key-value pairs and called lifecycle callbacks (Glazkov, 2014c).There are four recoginized callbacks
+                available to each custom element:
+
+                <ul>
+                  <li>
+                    createdCallback() - invoked once an instance of an element is created
+                  </li>
+                  <li>
+                    attachedCallback() - invoked when an element is inserted into the DOM
+                  </li>
+                  <li>
+                    detachedCallback() - invoked when an element is removed from the DOM
+                  </li>
+                  <li>
+                    attributeChangedCallback(<name>,<oldVal>, <newVal>) - invoked whenever an element’s
+attribute is added, changed or removed.
+                  </li>
+                </ul>
+
+                To use the callbacks, define the functions as properties of a prototype object. The following code
+                illustrates callback implementation (Bidelman. 2013b).
+
+                img
+              </p>
+
+              <h4 id="Shadow DOM">Shadow DOM</h4>
+
+              <p>
+                As discussed earlier, one of the aspects that makes front-end development so difficult is the
+                lack of encapsulation. This is especially problematic when faced with component development.
+                Without encapsulation, CSS rules meant for components could leak and cause css conflicts.
+                Another issue is that code external to the component can still traverse into the component’s branch
+                of the DOM tree. The following section will review how Shadow DOM addresses this DOM tree encapsulation problem.
+              </p>
+
+              <h5 id="trees-of-trees">Trees of Trees</h5>
+
+              <p>
+                When a page is loaded, the browser creates a DOM (Document Object Model) of the page.
+                The HTML DOM model is constructed as a tree of objects also called nodes (WHATWG.org,
+                2015b). Nodes are allowed to express three different subtrees, the Document tree, the Shadow tree
+                and the Composed tree. The Document tree represents the normal DOM tree whose root node
+                is a document. This tree is visible to the end user. The Shadow tree represents the internal DOM
+                subtree which is scoped and not visible to the end user. The Composed tree is what the browser
+                actually renders (Patel, 2015:22). For rendering, the document tree is distributed into the shadow
+                DOM to produce the composed DOM (Polymer-Project.org, a).
+
+                img
+
+                Any node in the document tree can “host” one or more shadow trees. These host nodes are then
+                referred to as shadow hosts. The associated shadow tree hosted by this node contains a root node
+                called a shadow root as seen in Figure 1 (Ihrig, 2012). It is important to note that the shadow root
+                is not a child node of the shadow host; to the contrary the shadow root does not have a parent at
+                all. Because it’s an orphan, the shadow tree and all of its children nodes are scoped and do not affect other node trees. For example, document.getElementById(‘shadowElementId’) will always return
+                null. This also applies to CSS selector matches. Additionally, when a shadow host has multiple
+                shadow DOM subtrees only the last or oldest tree will be rendered (Glazkov and Ito, 2015c).
+              </p>
+
+              <h5>Creating the Shadow DOM</h5>
+
+              <p>
+                A Shadow DOM subtree must always be attached to an existing element, called the shadow
+                host. The shadow host can be a declarative HTML element, an imperative element created with
+                JavaScript or even a custom element. The Element.createShadowRoot(&lt;hostElement&gt;) is used to
+                create the scoped shadow root and the shadow DOM subtree attached to the host element (Mozilla.
+                org, 2015).
+
+                img
+
+                The above example adds a shadow DOM to a <code>&lt;button&gt;</code> element containing the text content
+                “Hello!”. Using JavaScript, content can be added to and removed from the shadow root as show
+                below.
+
+                img
+
+                The Composed tree then takes the shadow root and Document tree and builds up the new document.
+                The content of the shadow root is then rendered and visible to the user. If JavaScript attempts to
+                query the shadow host element or if the element is inspected in a browser, the shadow dom contents
+                will not be found. Only the original <code>&lt;button&gt;</code> element and “Hello!” will be returned as shown in
+                the following example (Figure 2).
+
+                img
+
+                This is why when an input tag is inspected the user only sees the <code>&lt;input&gt;</code> tag and nothing else. That
+                is because the actual inner contents are encapsulated and hidden in that element’s shadowroot.
+              </p>
+
+              <h5 id="distribution">Distribution</h5>
+
+              <p>
+                Distribution is the mechanism that determines which nodes inside a shadow host get
+                ‘projected’ into insertion points inside the host’s Shadow DOM. These projected nodes are referred
+                to as distributed nodes. There are two types of insertion points - content insertion points and
+                shadow insertion points (Overson and Strimpel, 2015: Ch.11). <br><br>
+                Currently, the special <code>&lt;content&gt;</code> element can be used declaratively in the shadow DOM to define
+                where certain host’s content should be visually projected (Page, 2015). However in cases where
+                only specific parts of the hosts content should be projected, the select attribute can be used. This
+                attribute accepts a css query selector to be matched in the context of the shadow host. The matched
+                element’s content is then injected into that content tag (Overson and Strimpel, 2015: Ch.11). If
+                multiple elements are matched, only the first element found will be projected. <br><br>
+                Shadow insertion points are similar to content insertion points in that they are placeholders for
+                their host. However, instead of projecting content, they project other shadow trees belonging to
+                their host. This allows shadow root inheritance as well as enabling multiple shadow roots to be rendered at the same time (Page, 2015). <br><br>
+                It is important to note that in both content distribution and shadow distribution the nodes do
+                not move locations in the DOM, they are simply projected to different insertion points across the
+                shadow root (Overson and Strimpel, 2015: Ch.11).
+              </p>
+
+              <h5 id="events">Events</h5>
+
+              <p>
+                Events in the shadow DOM behave differently than those in the document tree. Any events
+                fired from nodes in the shadow DOM are retargeted so they appear to come from the shadow host.
+                This is to prevent any encapsulation breakage. However, certain events are completely blocked at
+                the shadow root and are prevented from bubbling up to the document tree. The following events
+                are blocked in the shadow DOM: abort, error, select, change, load, reset, resize, scroll, selectstart
+                (Dodson, 2013).
+              </p>
+
+              <h5 id="styling">Styling</h5>
+
+              <p>
+                Shadow DOM elements can be styled both internally and externally. CSS styles defined
+                internally in the shadow DOM are scoped, meaning they are encapsulated by default and any styles
+                applied inside will not effect the outside elements. Internal styling is done using the :host pseudoelement
+                which targets the shadow host from within the shadow DOM. However, the parent page
+                selectors have a higher specificity than the :host selector, meaning outside stylesheets can override
+                any styles defined inside the shadow DOM. This can be resolved by writing inline styling on the
+                host element (Overson and Strimpel, 2015: Ch.11). External styling from the parent page can
+                be done using the ::shadow pseudoelement which allows developers to select child elements of a
+                specific shadow root. When selecting all shadow roots within an entire application it is best to use
+                the /deep/ combinator.
+              </p>
+
+              <h4 class="html-imports">HTML Imports</h4>
+
+              <p>
+                The majority of the web platform is declarative in how it imports content. For instance,
+                <code>&lt;script&gt;</code> is used for JavaScript, <code>&lt;link&gt;</code> for css and <code>&lt;img&gt;</code> for images. However, HTML does not have
+                a standard import which has lead to often complex and ineffecient ways of loading external HTML.
+                Currently, the standard methods include AJAX, <code>&lt;iframes&gt;</code> or other messy hacks like embedding
+                html in strings. HTML Imports improves the status quo by allowing developers to include and reuse
+                HTML documents in other HTML documents. The import process also includes any resources
+                used inside the imported document such as JavaScript, CSS and images. This enables modularity
+                through bundling of resources with components (Bidelman, 2013). The following sections will
+                review how this technology works and how it can help with page load times, code reusability and
+                dependency management.
+              </p>
+
+              <h5 id="the-basics">The Basics</h5>
+
+              <p>
+              HTML Imports use the <link> element to reference the file that you wish to import. This is
+              similar to how stylesheets are included except for the ref attribute, which is set to the new “import”
+              keyword.
+
+              img
+
+              A document that links to an import is called an ‘import referrer’ and the document that is being
+              imported is simply called the ‘imported document’ (Glazkov and Morrita, 2014). The URL of the
+              import is called the ‘import location’ and must adhere to the same-origin policy as AJAX requests,
+              meaning no cross-origin requests. However, this restriction can be avoided if the server that is
+              responsible for delivering the imports has been configured to support cross-origin resource sharing (CORS) (Overson and Strimpel, 2015: Ch.13).
+              </p>
+
+              <h5 id="parsing">Parsing</h5>
+
+              <p>
+                The link element does not block any parsing of the import referrer but does block rendering.
+                This is because any styles from your import are automatically applied to the main document to
+                prevent any Flash Of Unstyled Content (FOUC). However, if the imported document contains
+                any <code>&lt;script&gt;</code> tags, they will block parsing of the import referrer just like script tags in the main
+                document. This is because any scripts within the imported document are executed in order in the
+                context of the import referrer. This means scripts inside the import will be automatically called and
+                must not be appended into the main document. The import can be made completely asynchronous
+                and not block parsing or rendering by adding the async attribute to the link import tag . (Bidelman,
+                2013c).
+              </p>
+
+              <h5 id="accessing-imports">Accessing Imports</h5>
+
+              <p>
+                Anything other than scripts and styles in an imported document are only referenced and not
+                directly inserted into the import referrer. The contents of the imported document can be inserted
+                into the main document using JavaScript. This is done through the use of the link elements .import
+                property which references the import documents contents.
+
+                img
+
+                In the example above, the link element is selected and the contents of the imported document are
+                assigned to the htmlDoc variable as a DOM tree. Nodes can be selected, cloned and appended from
+                this tree into the main import referrer document. JavaScript inside imported documents have the same global document object as those from the
+                import referrer. For instance, a document.querySelector() in the imported document would
+                only select elements in the main document. In order to instead access the imported document’s
+                document object and DOM, the document.currentScript.ownerDocument must be used. This is
+                common when a component wants to automatically register custom elements and include them in
+                the main document (Bidelman, 2013c).
+              </p>
+
+              <h5 id="events">Events</h5>
+
+              <p>
+                Similarily to Ajax success and error callbacks, the HTML <link> element supports two
+                event handlers - load and error. Once the import has been successfully loaded the load event will
+                be fired. This can be leveraged by attaching callbacks to the onload attribute of the link element.
+                Otherwise, if the import returns an HTTP error, the error event will be fired and any error callbacks
+                assigned with the onerror attribute will be invoked. (Patel, 2015:16-17).
+              </p>
+
+              <h5 id="performance">Performance</h5>
+
+              <p>
+                One of the advantages of using HTML Imports is the ability to organize and seperate
+                sections of an application into components. If multiple components require the same libraries this
+                would normally lead to many HTTP requests and slower page loading. HTML Imports’ solution
+                to this is its own built-in mechanism called de-duping. De-duping prevents multiple requests for
+                the same resource URL. That is, if multiple imports reference the same URL, the browser will only
+                retrieve the required resource once (Bidelman, 2013c). However, de-duping only works on exact
+                URL matches - different URLs for the same resource will still be requested.
+                Another key to good page speed is reducing network requests. When an application imports many
+                components this can greatly slow down page load times. It is recommended to combine the import
+                links into a single resource using tools such as Vulcanize, which is a npm build tool from the Polymer team. However, this recommendation changes with the use of HTTP/2, where the number
+                of requests is no longer an issue.
+              </p>
+
+              <h4 id="working-together">Working Together</h4>
+
+              <p>
+                It is clear each part of the Web Components umbrella has it’s own distinct features. Each
+                technology can be utilized alone or in combination with others. A component that utilizes each
+                of the Web Components technologies will enjoy the advantages that come from each part, thus
+                improving modularity and reusability.
+                Ideally a component using Web Components technologies would be included in an application
+                via the HTML Import link tag. This would mean all of the component’s resources and styles
+                are bundled together, ensuring optimum reusability. Next the contents of the import would be
+                wrapped inside a <code>&lt;template&gt;</code>. This would ensure that none of the resources, images and styles are
+                loaded until they are needed. Inside the template there would be semantic and structured HTML
+                including custom elements. Finally, using the Shadow DOM affords the added benefit of style
+                encapsulation. This component development technique solves many major difficulties that web
+                developers face today.
+              </p>
             </div>
         </section>
       </article>
@@ -482,31 +931,81 @@
         <ul>
           <li>
             <a id="source1" href="http://www.webat25.
-org/news/jeff-jaffe-web25-w3c20-part3">Future Direction of the Open Web Platform - J. Jaffe
+org/news/jeff-jaffe-web25-w3c20-part3">[1] Future Direction of the Open Web Platform - J. Jaffe
             </a>
           </li>
           <li>
             <a id="source2" href="http://www.
-broken-links.com/2015/04/28/the-future-of-the-open-web">The future of the open web - P. Gaston</a>
+broken-links.com/2015/04/28/the-future-of-the-open-web">[2] The future of the open web - P. Gaston</a>
           </li>
           <li>
             <a id="source3" href="http://www.webat25.org/news/
-jeff-jaffe-web25-w3c20-part2">The creation and ethos of W3C - J. Jaffe</a>
+jeff-jaffe-web25-w3c20-part2">[3] The creation and ethos of W3C - J. Jaffe</a>
           </li>
           <li>
-            <a id="source4" href="http://shop.oreilly.com/product/0636920032489.do">The Uncertain Web - R. Larsen</a>
+            <a id="source4" href="http://shop.oreilly.com/product/0636920032489.do">[4] The Uncertain Web - R. Larsen</a>
           </li>
            <li>
             <a id="source5" href="https://www.w3.org/community/
-nextweb/2013/06/11/the-extensible-web-manifesto">The Extensible Web Manifesto - F. Remy</a>
+nextweb/2013/06/11/the-extensible-web-manifesto">[5] The Extensible Web Manifesto - F. Remy</a>
           </li>
           <li>
             <a id="source6" href="http://se.inf.ethz.ch/old/teaching/
-ss2007/0050/slides/02_softarch_modularity_reusability_adt_1up.pdf">Software Architecture - B. Meyer</a>
+ss2007/0050/slides/02_softarch_modularity_reusability_adt_1up.pdf">[6] Software Architecture - B. Meyer</a>
           </li>
           <li>
-            <a id="source6" href="http://blog.fedecarg.com/2008/06/28/a-modular-approach-to-web-development">[7] A Modular Approach To Web Development - F. Cargnelutti</a>
+            <a id="source7" href="http://blog.fedecarg.com/2008/06/28/a-modular-approach-to-web-development">[7] A Modular Approach To Web Development - F. Cargnelutti</a>
           </li>
+          <li>
+            <a id="source8" href="http://
+www.infoq.com/presentations/modular-design-web-components">[8] Modular Design with Web Components - R. Dodson</a>
+          </li>
+          <li>
+            <a id="source9" href="ttp://shop.oreilly.com/product/0636920033141.do">[9] Programming JavaScript Applications - E. Elliott</a>
+          </li>
+          <li>
+            <a id="source10" href="http://
+www.infoq.com/presentations/modular-design-web-components">[10] Decoupling Your HTML, CSS, and JavaScript - P. Walton</a>
+          </li>
+          <li>
+            <a id="source11" href="https://www.nostarch.com/modernweb">[11] The Modern Web: Multi-Device Web Development with HTML5, CSS3, and
+JavaScript - P. Gaston</a>
+          </li>
+          <li>
+            <a id="source12" href="http://www.adobe.com/devnet/archive/html5/articles/css-everything-is-globaland-
+how-to-deal-with-it.html">[12] CSS: Everything is global and how to deal with it - P. Walton</a>
+          </li>
+          <li>
+            <a id="source13" href="http://shop.oreilly.com/product/9781784393649.do">[13] Learning Web Component Development - S. Patel</a>
+          </li>
+          <li>
+            <a id="source14" href="https://www.manning.com/books/web-components-in-action">[14] Web Components In Action - C. Buckett</a>
+          </li>
+          <li>
+            <a id="source15" href="https://leanpub.com/web-component-development-with-angularjs/read">[15] Web Component Architecture & Development with Angular JS - D. Shapiro</a>
+          </li>
+          <li>
+            <a id="source16" href="http://www.w3.org/TR/NOTEHTMLComponents">[16] HTML Components - C. Wilson</a>
+          </li>
+          <li>
+            <a id="source17" href="http://www.w3.org/TR/xbl">[17] XBL 2.0 - I. Hickson</a>
+          </li>
+          <li>
+            <a id="source18" href="http://w3c.
+github.io/webcomponents/spec/shadow/#acknowledgements">[18] Shadow DOM Acknowledgemnets</a>
+          </li>
+          <li>
+            <a id="source19" href="http://www.html5rocks.com/
+en/tutorials/webcomponents/template">[19] HTML’s New Template Tag - E. Bidelman</a>
+          </li>
+          <li>
+            <a id="source20" href="https://
+html.spec.whatwg.org/multipage/scripting.html#the-template-element:the-template-element">[20] HTML Living Standard - The template element</a>
+          </li>
+          <li>
+            <a id="source21" href="http://shop.oreilly.com/product/0636920032922.do">[21] Developing Web Components - J. Overson & J.Strimpel</a>
+          </li>
+
         </ul>
       </section>
 
