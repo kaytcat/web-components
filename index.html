@@ -516,6 +516,7 @@
                 a HTMLTemplateElement interface - the template interface that extends the HTMLElement class.
                 Like all W3C interface objects it contains an IDL (Interface Definition Language) that is used to
                 describe its states and behaviours to the browser <sup><a href="#source13">[13]</a></sup>
+              </p>
 
 <pre>
 <span class="accent">interface</span>
@@ -524,7 +525,7 @@ HTMLElement {
   readonly attribute
 DocumentFragment content;
 };</pre>
-
+              <p>
                 The previous code is the IDL for the template element. It describes the element as having one
                 read-only attribute called “content” which returns a DocumentFragment. The DocumentFragment
                 object is asscociated with a different Document object than the rest of the website. This prevents the
@@ -539,6 +540,7 @@ DocumentFragment content;
                 A template is created using the opening <code>&lt;template&gt;</code> and closing <code>&lt;/template&gt;</code> tags. The
                 element can be placed anywhere in the <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code> or <code>&lt;frameset&gt;</code> including subsequent
                 children elements <sup><a href="#source21">[21]</a></sup>.
+              </p>
 
 <pre>
 &lt;<span class="accent">template</span> id=&quot;mytemplate&quot;&gt;
@@ -546,11 +548,13 @@ DocumentFragment content;
   &lt;div class=&quot;message&quot;&gt;&lt;/div&gt;
 &lt;/<span class="accent">template</span>&gt;
 </pre>
+              <p>
 
                 The first step to activate the template is by selecting the template element followed by either
                 cloning or importing the templates content into a new document using script. This is done using
                 the .content attribute associated with the element <sup><a href="#source20">[20]</a></sup>. To following code
                 illustrates the process of selecting an elment and retrieving the content.
+              </p>
 
 <pre>
 var <span class="accent">myNewTemplate</span> = <b>document</b>.querySelector('#mytemplate');
@@ -558,9 +562,10 @@ var <span class="accent">myNewTemplate</span> = <b>document</b>.querySelector('#
 <span class="comment">// Additionally populate template content at runtime</span>
 <span class="accent">myNewTemplate</span>.<span class="accent2">content</span>.querySelector('img').src = 'logo.png';
 </pre>
-
+              <p>
                 Once selected the content must then be cloned or imported. The first method - cloning - uses the
                 cloneNode() method shown in the following example.
+              </p>
 
 <pre>
 var templateContent = <span class="accent">myNewTemplate</span>.<span class="accent2">content</span>,
@@ -569,10 +574,12 @@ var templateContent = <span class="accent">myNewTemplate</span>.<span class="acc
 container.appendChild(activeContent);
 </pre>
 
+              <p>
                 The Boolean parameter represents the cloning type - true for deep cloning, which targets the node
                 and all of its children nodes, and false for shallow cloning, which only targets the parent node and
                 no children. The second approach uses the importNode() method which has a slightly different
                 syntax.
+              </p>
 
 <pre>
 var templateContent = <span class="accent">myNewTemplate</span>.<span class="accent2">content</span>,
@@ -580,7 +587,7 @@ var templateContent = <span class="accent">myNewTemplate</span>.<span class="acc
 
 container.appendChild(activeContent);
 </pre>
-
+              <p>
                 It takes two input parameters - the first being the templates content node and the second is the
                 boolean flag representing the cloning type, again with the same boolean option as in cloneNode().
                 Either method can be used - they will result in the same outcome. The only difference between the
@@ -596,7 +603,7 @@ container.appendChild(activeContent);
                 mentioned earlier, this is because HTML was originally created for simple technical documents
                 and not the complex websites we see today. Custom Elements enable developers to create their own
                 custom HTML tags and extend existing tags to ensure more semantic and readable markup as well as
-                providing easier component reuse (Kitamura, 2014). Even though we can currently create our own
+                providing easier component reuse <sup><a href="#source23">[23]</a></sup>. Even though we can currently create our own
                 custom tags such as <code>&lt;foo&gt;</code>, we do not have any of the functionality that the new Custom Elements
                 allows. Custom elements provide a common way to encapsulate functionality in a self-describing manner that is stored in a reusable tag that include definable lifecycle methods.
               </p>
@@ -610,24 +617,26 @@ container.appendChild(activeContent);
                 The first argument is the element name and the second is an optional argument which allows you
                 to define the prototype object from which the element inherits. If no second argument is given the
                 custom element by default has a HTMLElement.prototype object <sup><a href="#source21">[21]</a></sup>.
+              </p>
 
 <pre>
 var <span class="accent">customElement</span> = <b>document</b>.<span class="accent2">registerElement</span>('foo');
 </pre>
 
-              Every document has a registry which contains a set of element definitions. When an element is
-              registered it’s definition is then stored in this registry. Effectively, whenever a new DOM element
-              is created, whether imperatively or declaratively, the browser will scan the registry for a matching
-              element definition. If one is found, the browser creates a new instance of the custom element <sup><a href="#source22">[22]</a></sup>. However, if the element definition is not yet registered, the custom element
-              instance is called an unresolved element. This unresolved element can be then upgraded to a custom
-              element if registered later <sup><a href="#source14">[14]</a></sup>. <br><br>
-              It is imperative that custom elements contain proper naming conventions. Each element name must
-              contain at least one hyphen-minus symbol and cannot contain underscores <sup><a href="#source23">[23]</a></sup>. This
-              distinguishes them from non custom elements and built-in HTML elements. The browser will treat
-              elements with hyphened names as a valid custom elements that have HTMLElement interfaces
-              rather than HTMLUnknownElement such as unknown tags without hyphens <sup><a href="#source14">[14]</a></sup><sup><a href="#source24">[24]</a></sup>. This is also to prevent naming collisions from occuring as new elements are added
-              to the HTML specification <sup><a href="#source21">[21]</a></sup>. If an element is attempted to be
-              registered with an incorrect name an error will result.
+              <p>
+                Every document has a registry which contains a set of element definitions. When an element is
+                registered it’s definition is then stored in this registry. Effectively, whenever a new DOM element
+                is created, whether imperatively or declaratively, the browser will scan the registry for a matching
+                element definition. If one is found, the browser creates a new instance of the custom element <sup><a href="#source22">[22]</a></sup>. However, if the element definition is not yet registered, the custom element
+                instance is called an unresolved element. This unresolved element can be then upgraded to a custom
+                element if registered later <sup><a href="#source14">[14]</a></sup>. <br><br>
+                It is imperative that custom elements contain proper naming conventions. Each element name must
+                contain at least one hyphen-minus symbol and cannot contain underscores <sup><a href="#source23">[23]</a></sup>. This
+                distinguishes them from non custom elements and built-in HTML elements. The browser will treat
+                elements with hyphened names as a valid custom elements that have HTMLElement interfaces
+                rather than HTMLUnknownElement such as unknown tags without hyphens <sup><a href="#source14">[14]</a></sup><sup><a href="#source24">[24]</a></sup>. This is also to prevent naming collisions from occuring as new elements are added
+                to the HTML specification <sup><a href="#source21">[21]</a></sup>. If an element is attempted to be
+                registered with an incorrect name an error will result.
               </p>
 
               <h5>Adding Prototypes</h5>
@@ -641,14 +650,16 @@ var <span class="accent">customElement</span> = <b>document</b>.<span class="acc
                 prototype of the newly created object and the second is optional parameter is a propertyObject and
                 is used to define new properties and methods. When creating standard, non-extended elements the
                 default HTMLElement.prototype is used as the first parameter as shown below.
+              </p>
 
 <pre>
 var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="accent2">create</span>(HTMLElement.<span class="accent3">prototype</span>);
 </pre>
-
+              <p>
                 The preceding code has created a new object with the HTMLElement.prototype and has assigned
                 this to the newCustomPrototype variable. However, developers can also utilize the optional
                 propertyObject parameter and immediately define some methods and properties as follows:
+              </p>
 
 <pre>
 var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="accent2">create</span>(HTMLElement.<span class="accent3">prototype</span>,
@@ -662,10 +673,10 @@ var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="
   }
 )
 </pre>
-
+              <p>
                 This method of constructing the prototype makes use of JavaScript’s get/set syntax <sup><a href="#source25">[25]</a></sup>. If the propertyObject parameter is not used then methods and properties must be added
                 to the object variable dynamically as seen below.
-
+              </p>
 <pre>
 var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="accent2">create</span>(HTMLElement.<span class="accent3">prototype</span>);
 
@@ -677,7 +688,7 @@ var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="
 <span class="comment">// Define a property "bar"</span>
 <b>Object</b>.defineProperty(<span class="accent">newCustomPrototype</span>, "bar", {value: 5});
 </pre>
-
+              <p>
                 The preceding code used the defineProperty method to add properties to the newCustomPrototype
                 object. This method contains three parameters - the first parameter should be your prototype object,
                 the second is the name of the property and the third should be an object describing the behaviour
@@ -687,14 +698,14 @@ var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="
                 document.registerElement() method upon registration. As mentioned earlier, the second parameter
                 of document.registerElement() contains a property called prototype which can be set to the newly
                 created prototype object.
-
+              </p>
 <pre>
 <b>document</b>.<span class="accent2">registerElement</span>.('foo', {<span class="accent3">prototype</span>: <span class="accent">newCustomPrototype</span>});
 </pre>
-
+              <p>
                 If the element has not yet been instantiated declaratively it can then be added to the dom imperatively
                 either with document.createElement() or with the new operator <sup><a href="#source25">[25]</a></sup>.
-
+              </p>
 <pre>
 var <span class="accent">superInput</span> = <b>document</b>.<span class="accent2">createElement</span>('input', 'super-input');
 </pre>
@@ -708,24 +719,24 @@ var <span class="accent">superInput</span> = <b>document</b>.<span class="accent
                 to the registerElement() second parameter with the name of the element it wishes to extend. The
                 use of the ‘extends’ option specifies that the element is being registered as a type extenstion custom
                 element instead of the standard custom element <sup><a href="#source21">[21]</a></sup>.
-
+              </p>
 <pre>
 var <span class="accent">superInput</span> = <b>document</b>.<span class="accent2">registerElement</span>('super-input', {
   prototype: <b>Object</b>.<span class="accent3">create</span>(HTMLButtonElement.<span class="accent4">prototype</span>),
   extends: 'input'
 });
 </pre>
-
+              <p>
                 The above code illustrates how the custom element <code>&lt;super-input&gt;</code> extends the native <code>&lt;input&gt;</code>
                 element. As instantiated it would inherit the input element’s name, role, states, properties and builtin
                 focus and keyboard interaction behaviours. This means that it does not introduce a new tag, but
                 rather extends an existing element of the specified type under the existing tag name (in the example
                 above, ‘input’). An extended element can be instantiated declaratively using the ‘is’ attribute.
-
+              </p>
 <pre>
 &lt;input <span class="accent">is</span>=&quot;super-input&quot;&gt;
 </pre>
-
+              <p>
                 Another way to instantiate an extended element is imperatively in JavaScript using the createElement()
                 method and setting the second parameter as the extended elements name <sup><a href="#source24">[24]</a></sup>.
               </p>
@@ -759,6 +770,7 @@ attribute is added, changed or removed.
 
                 To use the callbacks, define the functions as properties of a prototype object. The following code
                 illustrates callback implementation <sup><a href="#source25">[25]</a></sup>.
+                </p>
 
 <pre>
 var <span class="accent">newCustomePrototype</span> = <b>Object</b>.<span class="accent2">create</span>(HTMLElement.<span class="accent3">prototype</span>);
@@ -767,7 +779,7 @@ var <span class="accent">newCustomePrototype</span> = <b>Object</b>.<span class=
 
 <span class="accent">NewCustomPrototype</span>.<span class="accent4">attachedCallback</span> = function() {...};
 </pre>
-              </p>
+
 
               <h4 id="Shadow DOM">Shadow DOM</h4>
 
@@ -808,6 +820,7 @@ var <span class="accent">newCustomePrototype</span> = <b>Object</b>.<span class=
                 host. The shadow host can be a declarative HTML element, an imperative element created with
                 JavaScript or even a custom element. The Element.createShadowRoot(&lt;hostElement&gt;) is used to
                 create the scoped shadow root and the shadow DOM subtree attached to the host element.
+              </p>
 
 <pre>
 &lt;button&gt;Hello!&lt;/button&gt;
@@ -817,15 +830,15 @@ var <span class="accent">newCustomePrototype</span> = <b>Object</b>.<span class=
   var root = <span class="accent">host</span>.<span class="accent2">createShadowRoot</span>();
 &lt;/script&gt;
 </pre>
-
+              <p>
                 The above example adds a shadow DOM to a <code>&lt;button&gt;</code> element containing the text content
                 “Hello!”. Using JavaScript, content can be added to and removed from the shadow root as show
                 below.
-
+              </p>
 <pre>
 <span class="accent">root</span>.textContent = 'Now say Goodbye!';
 </pre>
-
+              <p>
                 The Composed tree then takes the shadow root and Document tree and builds up the new document.
                 The content of the shadow root is then rendered and visible to the user. If JavaScript attempts to
                 query the shadow host element or if the element is inspected in a browser, the shadow dom contents
@@ -905,13 +918,14 @@ var <span class="accent">newCustomePrototype</span> = <b>Object</b>.<span class=
               HTML Imports use the <code>&lt;link&gt;</code> element to reference the file that you wish to import. This is
               similar to how stylesheets are included except for the ref attribute, which is set to the new “import”
               keyword.
+              </p>
 
 <pre>
 &lt;head&gt;
   &lt;link rel=&quot;<span class="accent">import</span>&quot; href=&quot;path/to/importstuff.html&quot;&gt;
 &lt;/head&gt;
 </pre>
-
+              <p>
               A document that links to an import is called an ‘import referrer’ and the document that is being
               imported is simply called the ‘imported document’ <sup><a href="#source31">[31]</a></sup>. The URL of the
               import is called the ‘import location’ and must adhere to the same-origin policy as AJAX requests,
@@ -939,13 +953,13 @@ var <span class="accent">newCustomePrototype</span> = <b>Object</b>.<span class=
                 directly inserted into the import referrer. The contents of the imported document can be inserted
                 into the main document using JavaScript. This is done through the use of the link elements .import
                 property which references the import documents contents.
-
+              </p>
 <pre>
 var <span class="accent">link</span> = <b>document</b>.querySelector('link[rel="import"]');
 
 var content = <span class="accent">link</span>.<span class="accent2">import</span>;
 </pre>
-
+              <p>
                 In the example above, the link element is selected and the contents of the imported document are
                 assigned to the htmlDoc variable as a DOM tree. Nodes can be selected, cloned and appended from
                 this tree into the main import referrer document. JavaScript inside imported documents have the same global document object as those from the
@@ -1247,7 +1261,7 @@ var content = <span class="accent">link</span>.<span class="accent2">import</spa
                 And although many libraries and frameworks have tried to find solutions to these problems the
                 underlying issues remain. It is clear that the web either needs new technologies, or the existing
                 technologies need to be upgraded. Web Components attempts at solving these issues by upgrading
-                our existing web platform technologies.
+                our existing web platform technologies. <br><br>
                 Since Microsoft’s attempt in 1998, the approach towards Web Components has changed, even if the
                 core ideas have not. The new specifications display a thoughtful and forward thinking approach.
                 Today, Web Components are finally ready to become a standard, with vendor and community
