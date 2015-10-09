@@ -700,7 +700,7 @@ var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="
                 created prototype object.
               </p>
 <pre>
-<b>document</b>.<span class="accent2">registerElement</span>.('foo', {<span class="accent3">prototype</span>: <span class="accent">newCustomPrototype</span>});
+<b>document</b>.<span class="accent2">registerElement</span>('foo', { <span class="accent3">prototype</span>: <span class="accent">newCustomPrototype</span> });
 </pre>
               <p>
                 If the element has not yet been instantiated declaratively it can then be added to the dom imperatively
@@ -773,9 +773,9 @@ attribute is added, changed or removed.
                 </p>
 
 <pre>
-var <span class="accent">newCustomePrototype</span> = <b>Object</b>.<span class="accent2">create</span>(HTMLElement.<span class="accent3">prototype</span>);
+var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="accent2">create</span>(HTMLElement.<span class="accent3">prototype</span>);
 
-<span class="accent">NewCustomPrototype</span>.<span class="accent4">cretedCallback</span> = function() {...};
+<span class="accent">NewCustomPrototype</span>.<span class="accent4">createdCallback</span> = function() {...};
 
 <span class="accent">NewCustomPrototype</span>.<span class="accent4">attachedCallback</span> = function() {...};
 </pre>
