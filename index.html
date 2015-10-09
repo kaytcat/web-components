@@ -376,7 +376,7 @@
                 architecture. Since the beginning of 2011 and also currently, the term
                 “Web Components” has been used to refer to the new W3C standards. <br><br>
                 The development of modern “Web Components” can be traced back to 2005, with the beginning of
-                the „AJAX“ revolution and server side RAD (Rapid Application Development) frameworks such as
+                the "AJAX" revolution and server side RAD (Rapid Application Development) frameworks such as
                 Ruby on Rails, CakePHP and Django. These technologies helped advance front-end development
                 by delivering content asynchronously while maintaining performance and enabling websites to be
                 built in weeks rather than months <sup><a href="#source15">[15]</a></sup>. Additionally, in 2005, the DOJO toolkit was
@@ -646,7 +646,7 @@ var <span class="accent">customElement</span> = <b>document</b>.<span class="acc
                 conveys a similar amount of semantics as a HTML div or span element. In order to actually add
                 custom behavior to a custom element, properties and methods must be defined for that element
                 through a JavaScript API <sup><a href="#source24">[24]</a></sup>. This can be done by first creating a new JavaScript
-                object using the Object.Create() method. This method accepts two parameters, the first is the target
+                object using the Object.create() method. This method accepts two parameters, the first is the target
                 prototype of the newly created object and the second optional parameter is a propertyObject and
                 is used to define new properties and methods. When creating a standard, non-extended elements the
                 default HTMLElement.prototype is used as the first parameter as shown below.
@@ -775,9 +775,9 @@ attribute is added, changed or removed.
 <pre>
 var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="accent2">create</span>(HTMLElement.<span class="accent3">prototype</span>);
 
-<span class="accent">NewCustomPrototype</span>.<span class="accent4">createdCallback</span> = function() {...};
+<span class="accent">newCustomPrototype</span>.<span class="accent4">createdCallback</span> = function() {...};
 
-<span class="accent">NewCustomPrototype</span>.<span class="accent4">attachedCallback</span> = function() {...};
+<span class="accent">newCustomPrototype</span>.<span class="accent4">attachedCallback</span> = function() {...};
 </pre>
 
 
@@ -815,8 +815,7 @@ var <span class="accent">newCustomPrototype</span> = <b>Object</b>.<span class="
               <h5>Creating the Shadow DOM</h5>
 
               <p>
-                A Shadow DOM subtree must always be attached to an existing element, called the shadow
-                host. The shadow host can be a declarative HTML element, an imperative element created with JavaScript or even a custom element. The Element.createShadowRoot(&lt;hostElement&gt;) is used to create the scoped shadow root and the shadow DOM subtree attached to the host element.
+                A Shadow DOM subtree must always be attached to an existing element, called the shadow host. The shadow host can be a declarative HTML element, an imperative element created with JavaScript or even a custom element. The Element.createShadowRoot(&lt;hostElement&gt;) is used to create the scoped shadow root and the shadow DOM subtree attached to the host element.
               </p>
 
 <pre>
